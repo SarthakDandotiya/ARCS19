@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<meta http-equiv="X-UA-Compatible" content="ie=edge" />
+		<title>ARCS'19</title>
+		<link
+			rel="shortcut icon"
+			href="./images/arcsLogo.ico"
+			type="image/x-icon"
+		/>
+
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+		<link
+			href="https://fonts.googleapis.com/css?family=Montserrat:400,500,700"
+			rel="stylesheet"
+		/>
+
+		<link rel="stylesheet" href="./css/onepage-scroll.css" />
+		<script src="./scripts/jquery.onepage-scroll.min.js"></script>
+
+		<link rel="stylesheet" href="./css/curtains.css" />
+		<link rel="stylesheet" href="./css/style.css" />
+	</head>
+	<body>
+		<div class="chapter-logo">
+			<a href="http://ieeecsvit.com">
+				<img src="./images/IEEECSlogo.png" alt="IEEECS Logo" />
+			</a>
+		</div>
+		<div class="toggle-btn" onclick="lockScroll()">
+			<span class="one"></span> <span class="two"></span>
+		</div>
+		<div class="menu-overlay">
+			<div class="block b1"></div>
+			<div class="block b2"></div>
+		</div>
+		<div class="menu">
+			<div class="data">
+				<ul>
+					<li>
+						<a
+							href="#landing"
+							class="clickable"
+							onclick="lockScroll()"
+							>Home</a
+						>
+					</li>
+					<li>
+						<a
+							href="#About"
+							class="clickable"
+							onclick="lockScroll()"
+							>About</a
+						>
+					</li>
+					<li>
+						<a
+							href="#Events"
+							class="clickable"
+							onclick="lockScroll()"
+							>Events</a
+						>
+					</li>
+					<li>
+						<a
+							href="#Sponsors"
+							class="clickable"
+							onclick="lockScroll()"
+							>Sponsors</a
+						>
+					</li>
+					<li>
+						<a
+							href="#ARCS18"
+							class="clickable"
+							onclick="lockScroll()"
+							>ARCS'18</a
+						>
+					</li>
+					<li>
+						<a
+							href="#Contact"
+							class="clickable"
+							onclick="lockScroll()"
+							>Contact</a
+						>
+					</li>
+				</ul>
+			</div>
+		</div>
+		<div class="main">
+			<section id="landing">
+				<div class="pos">
+					<div id="canvas">
+						<div class="plane">
+							<img src="./images/arcs_sm.png" alt="Logo" />
+						</div>
+					</div>
+				</div>
+			</section>
+			<section id="About">About</section>
+			<section id="Events">Events</section>
+			<section id="Sponsors">Sponsors</section>
+			<section id="ARCS18">ARCS'18</section>
+			<section id="Contact">Contact</section>
+		</div>
+	</body>
+	<script src="./scripts/scroll.js"></script>
+	<script src="./scripts/curtains.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.0.2/TweenMax.min.js"></script>
+	<script src="//cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.6/ScrollMagic.min.js"></script>
+	<script src="//cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.6/plugins/debug.addIndicators.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.6/plugins/animation.gsap.min.js"></script>
+	<script id="plane-vs" type="x-shader/x-vertex">
+		#ifdef GL_ES
+		precision mediump float;
+		#endif
+
+		// those are the mandatory attributes that the lib sets
+		attribute vec3 aVertexPosition;
+		attribute vec2 aTextureCoord;
+
+		// those are mandatory uniforms that the lib sets and that contain our model view and projection matrix
+		uniform mat4 uMVMatrix;
+		uniform mat4 uPMatrix;
+
+		// our time uniform
+		uniform float uTime;
+
+		// our mouse position uniform
+		uniform vec2 uMousePosition;
+
+		// our mouse strength
+		uniform float uMouseStrength;
+
+		// if you want to pass your vertex and texture coords to the fragment shader
+		varying vec3 vVertexPosition;
+		varying vec2 vTextureCoord;
+
+		void main() {
+		  vec3 vertexPosition = aVertexPosition;
+
+		  // get the distance between our vertex and the mouse position
+		  float distanceFromMouse = distance(uMousePosition, vec2(vertexPosition.x, vertexPosition.y));
+
+		  // this will define how close the ripples will be from each other. The bigger the number, the more ripples you'll get
+		  float rippleFactor = 4.5;
+		  // calculate our ripple effect
+		  float rippleEffect = cos(rippleFactor * (distanceFromMouse - (uTime / 140.0)));
+
+		  // calculate our distortion effect
+		  float distortionEffect = rippleEffect * uMouseStrength;
+
+		  // apply it to our vertex position
+		  vertexPosition +=  distortionEffect / 70.0;
+
+			gl_Position = uPMatrix * uMVMatrix * vec4(vertexPosition, 1.0);
+
+		  // varyings
+			vTextureCoord = aTextureCoord;
+			vVertexPosition = vertexPosition;
+		}
+	</script>
+	<script id="plane-fs" type="x-shader/x-fragment">
+		#ifdef GL_ES
+		precision mediump float;
+		#endif
+
+		// get our varyings
+		varying vec3 vVertexPosition;
+		varying vec2 vTextureCoord;
+
+		// our texture sampler (this is the lib default name, but it could be changed)
+		uniform sampler2D uSampler0;
+
+		void main() {
+		  // get our texture coords
+		  vec2 textureCoords = vTextureCoord;
+
+		  // apply our texture
+		  vec4 finalColor = texture2D(uSampler0, textureCoords);
+
+		  // fake shadows based on vertex position along Z axis -0.1
+		  finalColor.rgb -= clamp(-vVertexPosition.z, 0.0, 0.9);
+		  // fake lights based on vertex position along Z axis 0.0001
+		  finalColor.rgb += clamp(vVertexPosition.z, 0.0, 0.9);
+
+		  // handling premultiplied alpha (useful if we were using a png with transparency)
+		  finalColor = vec4(finalColor.rgb * finalColor.a, finalColor.a);
+
+		  gl_FragColor = finalColor;
+		}
+	</script>
+	<script>
+		window.onload = function() {
+			var mousePosition = {
+				x: 0,
+				y: 0
+			};
+			var webGLCurtain = new Curtains("canvas");
+
+			// get our plane element
+			var planeElement = document.getElementsByClassName("plane")[0];
+
+			var params = {
+				vertexShaderID: "plane-vs",
+				fragmentShaderID: "plane-fs",
+				widthSegments: 40,
+				heightSegments: 40,
+				uniforms: {
+					time: {
+						name: "uTime",
+						type: "1f",
+						value: 1
+					},
+					mousePosition: {
+						name: "uMousePosition",
+						type: "2f",
+						value: [mousePosition.x, mousePosition.y]
+					},
+					mouseStrength: {
+						name: "uMouseStrength",
+						type: "1f",
+						value: 0
+					}
+				}
+			};
+
+			var plane = webGLCurtain.addPlane(planeElement, params);
+
+			plane
+				.onReady(function() {
+					plane.setPerspective(35);
+
+					document.body.addEventListener("mousemove", function(e) {
+						handleMovement(e, plane);
+					});
+
+					document.body.addEventListener("touchmove", function(e) {
+						handleMovement(e, plane);
+					});
+				})
+				.onRender(function() {
+					plane.uniforms.time.value += 0.5;
+
+					plane.uniforms.mouseStrength.value = Math.max(
+						0,
+						plane.uniforms.mouseStrength.value - 0.0195
+					);
+				});
+
+			function handleMovement(e, plane) {
+				if (e.targetTouches) {
+					mousePosition.x = e.targetTouches[0].clientX;
+					mousePosition.y = e.targetTouches[0].clientY;
+				} else {
+					mousePosition.x = e.clientX;
+					mousePosition.y = e.clientY;
+				}
+
+				var mouseCoords = plane.mouseToPlaneCoords(
+					mousePosition.x,
+					mousePosition.y
+				);
+
+				plane.uniforms.mousePosition.value = [
+					mouseCoords.x,
+					mouseCoords.y
+				];
+
+				plane.uniforms.mouseStrength.value = 0.5;
+			}
+		};
+	</script>
+	<script src="./scripts/main.js"></script>
+</html>
