@@ -50,15 +50,6 @@ $(document).on("click", ".clickable", function() {
 	t1.reversed(!t1.reversed());
 });
 
-//Fixing & Preventing Scrolling Behing Open Menu
-// function lockScroll() {
-// 	if ($("body").hasClass("lock-scroll")) {
-// 		$("body").removeClass("lock-scroll");
-// 	} else {
-// 		$("body").addClass("lock-scroll");
-// 	}
-// }
-
 // Main Animations
 var animateIn = new TimelineMax();
 var scene = new ScrollMagic.Scene({}).setTween(animateIn).addTo(controller);

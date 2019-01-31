@@ -31,6 +31,12 @@ body {
 	color: white;
 	font-family: "Montserrat", sans-serif;
 }
+.lock-scroll {
+	overflow: hidden;
+}
+.clickable {
+	cursor: pointer;
+}
 
 /* Chapter Logo */
 .chapter-logo {
@@ -46,7 +52,7 @@ body {
 
 /* Page Indicators */
 .onepage-pagination {
-	display: none;
+	/* display: none; */
 	top: 28%;
 	z-index: 10;
 }
@@ -159,6 +165,30 @@ li {
 a {
 	text-decoration: none;
 	color: white;
+}
+.data ul li a:after,
+.data ul li a:visited:after {
+	content: "";
+	height: 3px;
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	width: 0%;
+	background: #fff;
+	transition: 0.2s;
+}
+.data ul li a:hover:after,
+.data ul li a:visited:hover:after {
+	width: 100%;
+}
+.data ul li a.block,
+.data ul li a:visited.block {
+	display: block;
+	padding: 0.5em;
+}
+.data ul li a.block:hover,
+.data ul li a:visited.block:hover {
+	background: #fff;
 }
 
 /* Landing */
