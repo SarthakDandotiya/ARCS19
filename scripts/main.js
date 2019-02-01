@@ -53,3 +53,12 @@ $(document).on("click", ".clickable", function() {
 // Main Animations
 var animateIn = new TimelineMax();
 var scene = new ScrollMagic.Scene({}).setTween(animateIn).addTo(controller);
+
+// Typewriter
+var app = document.getElementById("app");
+
+var typewriter = new Typewriter(app, {
+	loop: false
+});
+
+typewriter.typeString("accrete<br>your<br>knowledge<br>").start();

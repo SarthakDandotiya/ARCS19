@@ -244,3 +244,35 @@ a:hover:after {
 	flex-direction: column;
 	justify-content: space-between;
 }
+
+#app {
+	font-family: "Major Mono Display", monospace;
+	font-size: 3em;
+}
+
+.landing-data-right p {
+	font-size: 1.5em;
+}
+
+@keyframes chevron {
+	from {
+		bottom: -10em;
+		opacity: 0;
+	}
+	to {
+		bottom: -11em;
+		opacity: 1;
+	}
+}
+.chevron {
+	position: absolute;
+	bottom: -10em;
+	left: 50%;
+	animation-duration: 1.5s;
+	animation-name: chevron;
+	animation-iteration-count: infinite;
+	animation-timing-function: cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+.chevron img {
+	max-width: 1.2em;
+}
