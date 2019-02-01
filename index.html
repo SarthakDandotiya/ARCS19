@@ -31,6 +31,8 @@
 		<link rel="stylesheet" href="./css/onepage-scroll.css" />
 		<script src="./scripts/jquery.onepage-scroll.min.js"></script>
 
+		<link rel="stylesheet" href="./node_modules/sal.js/dist/sal.css" />
+
 		<link rel="stylesheet" href="./css/curtains.css" />
 		<link rel="stylesheet" href="./css/style.css" />
 		<link rel="stylesheet" href="./css/responsive.css" />
@@ -95,7 +97,12 @@
 				</div>
 				<div class="landing-wrapper">
 					<div class="landing-data">
-						<div class="landing-data-left">
+						<div
+							class="landing-data-left"
+							data-sal="fade"
+							data-sal-delay="100"
+							data-sal-easing="ease-in"
+						>
 							<p>ARCS'19</p>
 							<a href="#" class="register-button"
 								>Register
@@ -297,4 +304,11 @@
 	</script>
 	<script src="https://unpkg.com/typewriter-effect/dist/core.js"></script>
 	<script src="./scripts/main.js"></script>
+	<script src="./node_modules/sal.js/dist/sal.js"></script>
+	<script>
+		sal({
+			threshold: 0.75,
+			once: false
+		});
+	</script>
 </html>
