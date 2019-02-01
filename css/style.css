@@ -52,7 +52,7 @@ body {
 
 /* Page Indicators */
 .onepage-pagination {
-	/* display: none; */
+	display: none;
 	top: 28%;
 	z-index: 10;
 }
@@ -139,16 +139,17 @@ span.two {
 }
 
 .data ul {
-	text-align: center;
+	text-align: left;
 	position: absolute;
 	display: flex;
-	flex-direction: row;
+	flex-direction: column;
+	/* align-items: flex-start; */
 	align-items: center;
 	justify-content: center;
 }
 
 .data ul li {
-	margin: 1em;
+	margin: 0.5em;
 }
 
 .lock-scroll {
@@ -158,7 +159,7 @@ span.two {
 li {
 	color: white;
 	font-size: 42px;
-	margin: 0.7em 0;
+	margin: 0.1em 0;
 	list-style: none;
 }
 
@@ -166,32 +167,80 @@ a {
 	text-decoration: none;
 	color: white;
 }
-.data ul li a:after,
-.data ul li a:visited:after {
+ul li a:after {
 	content: "";
-	height: 3px;
 	position: absolute;
 	bottom: 0;
 	left: 0;
 	width: 0%;
-	background: #fff;
-	transition: 0.2s;
+	border-bottom: 3px solid #faa41a;
+	transition: 0.4s;
 }
-.data ul li a:hover:after,
-.data ul li a:visited:hover:after {
+a:hover:after {
 	width: 100%;
 }
-.data ul li a.block,
-.data ul li a:visited.block {
-	display: block;
-	padding: 0.5em;
-}
-.data ul li a.block:hover,
-.data ul li a:visited.block:hover {
-	background: #fff;
+
+.pos {
+	position: relative;
 }
 
 /* Landing */
-.pos {
-	position: relative;
+.landing-wrapper {
+	display: flex;
+	height: 100%;
+	width: 100%;
+	flex-direction: column;
+	justify-content: center;
+	/* padding-right: 2em; */
+}
+
+.landing-data {
+	/* margin: 0em 2em; */
+	/* padding: 0em 2em; */
+	width: 100%;
+	height: 40vh;
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	align-items: center;
+	position: absolute;
+}
+
+.landing-data-left {
+	height: 100%;
+	/* height: 40vh; */
+	margin-left: 2.5em;
+	text-align: left;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+}
+
+.landing-data-left p {
+	height: 7em;
+	line-height: 0.3em;
+	font-size: 7em;
+	font-weight: 700;
+}
+
+.register-button {
+	/* height: 3em; */
+	font-size: 1.3em;
+	font-weight: 500;
+	line-height: 3em;
+	text-align: center;
+	background-color: #faa41a;
+	width: 50%;
+}
+.register-button:active {
+	background-color: #e99724;
+}
+
+.landing-data-right {
+	height: 100%;
+	margin-right: 2.5em;
+	text-align: right;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
 }
