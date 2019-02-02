@@ -155,13 +155,23 @@
 		font-size: 1.5em;
 		margin-bottom: 20px;
 	}
-}
 
-@media only screen and (max-width: 400px) {
+	.chapter-logo a img {
+		height: 40px;
+	}
+
+	.landing-data {
+		margin-top: 10em;
+	}
 	#app {
 		font-size: 1.2em;
 	}
+}
 
+@media only screen and (max-width: 400px) {
+	.landing-data {
+		margin-top: 7em;
+	}
 	.landing-data-right p {
 		margin-top: 10px;
 	}
