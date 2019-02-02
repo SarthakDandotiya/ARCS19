@@ -185,6 +185,37 @@ a:hover:after {
 }
 
 /* Landing */
+
+#shader {
+	/* make the body fits our viewport */
+	position: relative;
+	width: 50%;
+	height: 100vh;
+	margin: 0;
+
+	/* hide scrollbars */
+	overflow: hidden;
+}
+
+#canvas {
+	height: 85vh;
+	min-height: 70vh;
+	max-height: 100vh;
+	width: 100%;
+	background: transparent;
+	position: absolute;
+	/* z-index: -1000000; */
+}
+.plane {
+	width: 50%;
+	max-width: 1200px;
+	margin: 5vh auto;
+}
+
+.plane img {
+	display: none;
+}
+
 .landing-wrapper {
 	display: flex;
 	height: 100%;
@@ -246,11 +277,13 @@ a:hover:after {
 }
 
 #app {
-	font-family: "Major Mono Display", monospace;
+	/* font-family: "Major Mono Display", monospace; */
+	font-family: "Lato", sans-serif;
 	font-size: 3em;
 }
 
 .landing-data-right p {
+	font-family: "Lato", sans-serif;
 	font-size: 1.5em;
 }
 
@@ -341,4 +374,224 @@ a:hover:after {
 	width: 10%;
 	height: 3px;
 	background-color: #101010;
+}
+
+/* 
+ */
+/*  */
+/*  */
+/*  */
+/*  */
+/*  */
+@media only screen and (max-width: 1200px) {
+	/* Landing */
+	#canvas {
+		min-height: 30vh;
+		height: 60vh;
+	}
+	.plane {
+		margin-top: 12vh;
+	}
+	.landing-data-left p {
+		height: 5.5em;
+		line-height: 0.3em;
+		font-size: 5.5em;
+	}
+	.register-button {
+		font-size: 1.2em;
+		line-height: 2.5em;
+	}
+	#app {
+		font-size: 2.2em;
+	}
+
+	.landing-data-right p {
+		font-size: 1.3em;
+	}
+}
+
+@media only screen and (max-width: 900px) {
+	.landing-data-left p {
+		height: 4em;
+		line-height: 0.3em;
+		font-size: 4em;
+	}
+	.register-button {
+		font-size: 1em;
+		line-height: 2.5em;
+	}
+	#app {
+		font-size: 1.75em;
+	}
+
+	.landing-data-right p {
+		font-size: 1.1em;
+	}
+
+	#About p {
+		font-size: 1.5rem;
+	}
+
+	#About h3 {
+		font-size: 2.5em;
+	}
+
+	.about-links a {
+		font-size: 1.8rem;
+	}
+}
+
+@media only screen and (max-width: 600px) {
+	#canvas {
+		height: 45vh;
+		margin: 1em 0 0 0;
+	}
+	.plane {
+		margin-top: 10vh;
+	}
+	/* Menu */
+	.data ul li {
+		font-size: 1.5em;
+		margin: 1em;
+	}
+	/* Landing */
+	.plane {
+		width: 80%;
+		margin-top: 0.1vh;
+	}
+	.landing-data {
+		flex-direction: column;
+		margin: 10em 0 0 0;
+		padding: 0;
+	}
+	.landing-data-left {
+		justify-content: center;
+		align-items: center;
+		text-align: center;
+		margin-left: 0em;
+		margin: 0em 0 0 0;
+		width: 100%;
+		height: 50%;
+	}
+	.landing-data-right {
+		flex-direction: column;
+		justify-content: space-between;
+		align-items: center;
+		margin-right: 0;
+		margin: 2em;
+		width: 100%;
+		height: 60%;
+	}
+	.landing-data-left p {
+		height: 4em;
+		/* line-height: 0.3em; */
+		font-size: 4em;
+		margin-bottom: 25px;
+	}
+	.register-button {
+		font-size: 1em;
+		line-height: 2.5em;
+	}
+	#app {
+		text-align: left;
+		font-size: 1.55em;
+		width: 100%;
+		margin-left: 2em;
+	}
+	i {
+		display: none !important;
+	}
+
+	.landing-data-right p {
+		font-size: 1.1em;
+		text-align: right;
+		width: 100%;
+		margin-top: 1em;
+		margin-right: 2em;
+	}
+
+	@keyframes chevron {
+		from {
+			bottom: -3em;
+			opacity: 0;
+		}
+		to {
+			bottom: -4em;
+			opacity: 1;
+		}
+	}
+
+	#About p {
+		font-size: 1.2em;
+		margin: 1rem 2rem;
+	}
+
+	#About h3 {
+		font-size: 2em;
+		margin-top: 1.5em;
+		margin-left: 2rem;
+	}
+
+	/* .about-links {
+		flex-direction: column;
+		justify-content: center;
+		align-items: flex-start;
+	} */
+
+	.about-links a {
+		font-size: 1em;
+		margin-bottom: 20px;
+	}
+
+	.chapter-logo a img {
+		height: 40px;
+	}
+
+	.landing-data {
+		margin-top: 10em;
+	}
+	#app {
+		font-size: 1em;
+	}
+}
+
+@media only screen and (max-width: 425px) {
+	.landing-data {
+		margin-top: 7em;
+	}
+	.landing-data-right p {
+		margin-top: 10px;
+	}
+	#About p {
+		font-size: 1.1em;
+		margin: 1rem 2rem;
+	}
+
+	#About h3 {
+		font-size: 1.7em;
+		margin-top: 2em;
+		margin-left: 2rem;
+	}
+	.about-links a {
+		font-size: 1em;
+		/* margin-bottom: 20px; */
+	}
+}
+
+@media only screen and (max-width: 350px) {
+	#About p {
+		font-size: 1em;
+		margin: 1rem 2rem;
+	}
+
+	#About h3 {
+		font-size: 1.4em;
+		/* margin-top: 2em;
+        margin-left: 2rem; */
+		margin: 4rem 2rem 0.5rem 2rem;
+	}
+	.about-links a {
+		font-size: 1em;
+		/* margin-bottom: 20px; */
+	}
 }

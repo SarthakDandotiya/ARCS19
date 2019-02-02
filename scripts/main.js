@@ -58,7 +58,8 @@ var scene = new ScrollMagic.Scene({}).setTween(animateIn).addTo(controller);
 var app = document.getElementById("app");
 
 var typewriter = new Typewriter(app, {
-	loop: false
+	loop: false,
+	cursor: ""
 });
 
-typewriter.typeString("accrete<br>your<br>knowledge<br>").start();
+typewriter.typeString("ACCRETE<br>YOUR<br>KNOWLEDGE").start();
