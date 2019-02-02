@@ -1,7 +1,125 @@
-/* @media only screen and (max-width: 1200px) {
-	section {
-		background-color: coral !important;
-    }
-    
+@media only screen and (max-width: 1200px) {
+	/* Landing */
+	#canvas {
+		min-height: 30vh;
+		height: 60vh;
+	}
+	.plane {
+		margin-top: 12vh;
+	}
+	.landing-data-left p {
+		height: 5.5em;
+		line-height: 0.3em;
+		font-size: 5.5em;
+	}
+	.register-button {
+		font-size: 1.2em;
+		line-height: 2.5em;
+	}
+	#app {
+		font-size: 2.2em;
+	}
 
-} */
+	.landing-data-right p {
+		font-size: 1.3em;
+	}
+}
+
+@media only screen and (max-width: 900px) {
+	.landing-data-left p {
+		height: 4em;
+		line-height: 0.3em;
+		font-size: 4em;
+	}
+	.register-button {
+		font-size: 1em;
+		line-height: 2.5em;
+	}
+	#app {
+		font-size: 1.75em;
+	}
+
+	.landing-data-right p {
+		font-size: 1.1em;
+	}
+}
+
+@media only screen and (max-width: 600px) {
+	/* section {
+		background-color: coral !important;
+	} */
+	#canvas {
+		margin: -1em 0 0 0;
+	}
+	/* Menu */
+	.data ul li {
+		font-size: 1.5em;
+		margin: 0.7em;
+	}
+	/* Landing */
+	.plane {
+		width: 80%;
+		margin-top: 0.1vh;
+	}
+	.landing-data {
+		flex-direction: column;
+		margin: 10em 0 0 0;
+		padding: 0;
+	}
+	.landing-data-left {
+		justify-content: flex-start;
+		align-items: center;
+		text-align: center;
+		margin-left: 0em;
+		/* margin: 0 0 0 2em; */
+		width: 100%;
+		height: 50%;
+	}
+	.landing-data-right {
+		flex-direction: column;
+		justify-content: space-between;
+		align-items: center;
+		margin-right: 0;
+		margin: 2em;
+		width: 100%;
+		height: 60%;
+	}
+	.landing-data-left p {
+		height: 4em;
+		/* line-height: 0.3em; */
+		font-size: 4em;
+		margin-bottom: 25px;
+	}
+	.register-button {
+		font-size: 1em;
+		line-height: 2.5em;
+	}
+	#app {
+		text-align: left;
+		font-size: 1.75em;
+		width: 100%;
+		margin-left: 2em;
+	}
+	i {
+		display: none !important;
+	}
+
+	.landing-data-right p {
+		font-size: 1.3em;
+		text-align: right;
+		width: 100%;
+		margin-top: 1em;
+		margin-right: 2em;
+	}
+
+	@keyframes chevron {
+		from {
+			bottom: -4em;
+			opacity: 0;
+		}
+		to {
+			bottom: -5em;
+			opacity: 1;
+		}
+	}
+}
