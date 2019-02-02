@@ -45,12 +45,9 @@
 }
 
 @media only screen and (max-width: 600px) {
-	/* section {
-		background-color: coral !important;
-	} */
 	#canvas {
 		height: 45vh;
-		margin: 3em 0 0 0;
+		margin: 2em 0 0 0;
 	}
 	/* Menu */
 	.data ul li {
@@ -68,7 +65,7 @@
 		padding: 0;
 	}
 	.landing-data-left {
-		justify-content: flex-start;
+		justify-content: center;
 		align-items: center;
 		text-align: center;
 		margin-left: 0em;
@@ -89,7 +86,7 @@
 		height: 4em;
 		/* line-height: 0.3em; */
 		font-size: 4em;
-		margin-bottom: 5px;
+		margin-bottom: 25px;
 	}
 	.register-button {
 		font-size: 1em;
@@ -97,7 +94,7 @@
 	}
 	#app {
 		text-align: left;
-		font-size: 1.75em;
+		font-size: 1.55em;
 		width: 100%;
 		margin-left: 2em;
 	}
@@ -106,7 +103,7 @@
 	}
 
 	.landing-data-right p {
-		font-size: 1.3em;
+		font-size: 1.1em;
 		text-align: right;
 		width: 100%;
 		margin-top: 1em;
@@ -115,12 +112,26 @@
 
 	@keyframes chevron {
 		from {
-			bottom: -4em;
+			bottom: -3em;
 			opacity: 0;
 		}
 		to {
-			bottom: -5em;
-			opacity: 0;
+			bottom: -4em;
+			opacity: 1;
 		}
+	}
+}
+
+@media only screen and (max-width: 600px) {
+	section {
+		background-color: coral !important;
+	}
+
+	#app {
+		font-size: 1.2em;
+	}
+
+	.landing-data-right p {
+		margin-top: 10px;
 	}
 }
