@@ -100,6 +100,13 @@
 					</div>
 				</div>
 				<div class="landing-wrapper">
+					<div class="landing-image">
+						<img
+							src="./images/arcs_sm.png"
+							alt="ARCS Logo"
+							class="mobile-arcs-logo"
+						/>
+					</div>
 					<div class="landing-data">
 						<div
 							class="landing-data-left"
@@ -117,6 +124,7 @@
 								Accrete<br />Your<br />
 								Knowledge
                             </p> -->
+							<!-- ACCRETE<br />YOUR<br />KNOWLEDGE</div> -->
 							<div id="app"></div>
 							<p>VIT Vellore,<br />on the 27th of March</p>
 						</div>
@@ -160,6 +168,7 @@
 	<script src="//cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.6/ScrollMagic.min.js"></script>
 	<script src="//cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.6/plugins/debug.addIndicators.min.js"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.6/plugins/animation.gsap.min.js"></script>
+	<script src="./node_modules/typewriter-effect/dist/core.js"></script>
 	<script id="plane-vs" type="x-shader/x-vertex">
 		#ifdef GL_ES
 		precision mediump float;
@@ -242,86 +251,94 @@
 	</script>
 	<script>
 		window.onload = function() {
-			var mousePosition = {
-				x: 0,
-				y: 0
-			};
-			var webGLCurtain = new Curtains("canvas");
+			if (screen.width > 450) {
+				var mousePosition = {
+					x: 0,
+					y: 0
+				};
+				var webGLCurtain = new Curtains("canvas");
 
-			// get our plane element
-			var planeElement = document.getElementsByClassName("plane")[0];
+				// get our plane element
+				var planeElement = document.getElementsByClassName("plane")[0];
 
-			var params = {
-				vertexShaderID: "plane-vs",
-				fragmentShaderID: "plane-fs",
-				widthSegments: 40,
-				heightSegments: 40,
-				uniforms: {
-					time: {
-						name: "uTime",
-						type: "1f",
-						value: 1
-					},
-					mousePosition: {
-						name: "uMousePosition",
-						type: "2f",
-						value: [mousePosition.x, mousePosition.y]
-					},
-					mouseStrength: {
-						name: "uMouseStrength",
-						type: "1f",
-						value: 0
+				var params = {
+					vertexShaderID: "plane-vs",
+					fragmentShaderID: "plane-fs",
+					widthSegments: 40,
+					heightSegments: 40,
+					uniforms: {
+						time: {
+							name: "uTime",
+							type: "1f",
+							value: 1
+						},
+						mousePosition: {
+							name: "uMousePosition",
+							type: "2f",
+							value: [mousePosition.x, mousePosition.y]
+						},
+						mouseStrength: {
+							name: "uMouseStrength",
+							type: "1f",
+							value: 0
+						}
 					}
-				}
-			};
+				};
 
-			var plane = webGLCurtain.addPlane(planeElement, params);
+				var plane = webGLCurtain.addPlane(planeElement, params);
 
-			plane
-				.onReady(function() {
-					plane.setPerspective(35);
+				plane
+					.onReady(function() {
+						plane.setPerspective(35);
 
-					document.body.addEventListener("mousemove", function(e) {
-						handleMovement(e, plane);
+						document.body.addEventListener("mousemove", function(
+							e
+						) {
+							handleMovement(e, plane);
+						});
+
+						document.body.addEventListener("touchmove", function(
+							e
+						) {
+							handleMovement(e, plane);
+						});
+					})
+					.onRender(function() {
+						plane.uniforms.time.value += 0.5;
+
+						plane.uniforms.mouseStrength.value = Math.max(
+							0,
+							plane.uniforms.mouseStrength.value - 0.0195
+						);
 					});
 
-					document.body.addEventListener("touchmove", function(e) {
-						handleMovement(e, plane);
-					});
-				})
-				.onRender(function() {
-					plane.uniforms.time.value += 0.5;
+				function handleMovement(e, plane) {
+					if (e.targetTouches) {
+						mousePosition.x = e.targetTouches[0].clientX;
+						mousePosition.y = e.targetTouches[0].clientY;
+					} else {
+						mousePosition.x = e.clientX;
+						mousePosition.y = e.clientY;
+					}
 
-					plane.uniforms.mouseStrength.value = Math.max(
-						0,
-						plane.uniforms.mouseStrength.value - 0.0195
+					var mouseCoords = plane.mouseToPlaneCoords(
+						mousePosition.x,
+						mousePosition.y
 					);
-				});
 
-			function handleMovement(e, plane) {
-				if (e.targetTouches) {
-					mousePosition.x = e.targetTouches[0].clientX;
-					mousePosition.y = e.targetTouches[0].clientY;
-				} else {
-					mousePosition.x = e.clientX;
-					mousePosition.y = e.clientY;
+					plane.uniforms.mousePosition.value = [
+						mouseCoords.x,
+						mouseCoords.y
+					];
+
+					plane.uniforms.mouseStrength.value = 0.6;
 				}
-
-				var mouseCoords = plane.mouseToPlaneCoords(
-					mousePosition.x,
-					mousePosition.y
-				);
-
-				plane.uniforms.mousePosition.value = [
-					mouseCoords.x,
-					mouseCoords.y
-				];
-
-				plane.uniforms.mouseStrength.value = 0.6;
+			} else {
+				console.log("Mobile");
 			}
 		};
 	</script>
-	<script src="https://unpkg.com/typewriter-effect/dist/core.js"></script>
+	<!-- <script src="https://unpkg.com/typewriter-effect/dist/core.js"></script> -->
 	<script src="./scripts/main.js"></script>
 	<script src="./node_modules/sal.js/dist/sal.js"></script>
 	<script>
