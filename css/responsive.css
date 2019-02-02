@@ -49,12 +49,12 @@
 		background-color: coral !important;
 	} */
 	#canvas {
-		margin: -1em 0 0 0;
+		margin: -1.5em 0 0 0;
 	}
 	/* Menu */
 	.data ul li {
 		font-size: 1.5em;
-		margin: 0.7em;
+		margin: 1em;
 	}
 	/* Landing */
 	.plane {
@@ -71,7 +71,7 @@
 		align-items: center;
 		text-align: center;
 		margin-left: 0em;
-		/* margin: 0 0 0 2em; */
+		margin: 0em 0 0 0;
 		width: 100%;
 		height: 50%;
 	}
@@ -119,7 +119,7 @@
 		}
 		to {
 			bottom: -5em;
-			opacity: 1;
+			opacity: 0;
 		}
 	}
 }
