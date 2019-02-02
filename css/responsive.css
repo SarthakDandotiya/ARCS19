@@ -59,7 +59,10 @@
 @media only screen and (max-width: 600px) {
 	#canvas {
 		height: 45vh;
-		margin: 2em 0 0 0;
+		margin: 1em 0 0 0;
+	}
+	.plane {
+		margin-top: 10vh;
 	}
 	/* Menu */
 	.data ul li {
@@ -168,7 +171,7 @@
 	}
 }
 
-@media only screen and (max-width: 400px) {
+@media only screen and (max-width: 425px) {
 	.landing-data {
 		margin-top: 7em;
 	}
