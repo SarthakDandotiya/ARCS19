@@ -49,7 +49,8 @@
 		background-color: coral !important;
 	} */
 	#canvas {
-		margin: -1.5em 0 0 0;
+		height: 45vh;
+		margin: 3em 0 0 0;
 	}
 	/* Menu */
 	.data ul li {
@@ -88,7 +89,7 @@
 		height: 4em;
 		/* line-height: 0.3em; */
 		font-size: 4em;
-		margin-bottom: 25px;
+		margin-bottom: 5px;
 	}
 	.register-button {
 		font-size: 1em;
