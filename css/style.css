@@ -305,26 +305,35 @@ a:hover:after {
 	height: 100%;
 	display: flex;
 	flex-direction: column;
-	justify-content: space-evenly;
+	justify-content: center;
 	align-items: flex-start;
 }
 
 #About p {
-	margin: 1em;
-	font-size: 2em;
+	margin: 1em 1em 2em 1em;
+	font-size: 1.8em;
+	/* line-height: 2em; */
 }
 
 #About h3 {
-	margin: 0 2rem -10rem 2rem;
+	margin: 0 2rem 0rem 2rem;
 	font-size: 3em;
 }
 
 .about-links {
-	width: 40%;
-	margin: 0 2em;
+	width: 100%;
+	margin: 0em 2em 0 2em;
 	display: flex;
 	flex-direction: row;
-	justify-content: space-between;
+	justify-content: flex-start;
+	word-wrap: none;
+}
+
+.about-links a {
+	word-wrap: none;
+	font-weight: 500;
+	/* text-decoration: none; */
+	margin-right: 2em;
 }
 
 .line {
