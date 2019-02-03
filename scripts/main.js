@@ -55,6 +55,7 @@ var animateIn = new TimelineMax();
 var scene = new ScrollMagic.Scene({}).setTween(animateIn).addTo(controller);
 
 // Typewriter
+
 var app = document.getElementById("app");
 
 var typewriter = new Typewriter(app, {
