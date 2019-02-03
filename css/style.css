@@ -456,7 +456,7 @@ a:hover:after {
 	/* Menu */
 	.data ul li {
 		font-size: 1.5em;
-		margin: 1em;
+		margin: 0.75em;
 	}
 	/* Landing */
 	.plane {
@@ -560,6 +560,9 @@ a:hover:after {
 }
 
 @media only screen and (max-width: 425px) {
+	.data ul li {
+		margin: 0.6em;
+	}
 	#canvas {
 		display: none;
 	}
@@ -573,7 +576,7 @@ a:hover:after {
 	}
 	.mobile-arcs-logo {
 		display: block;
-		height: 300px;
+		height: 375px;
 		margin: 0 auto;
 		/* position: absolute; */
 		/* top: 0; */
