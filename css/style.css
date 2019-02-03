@@ -380,8 +380,63 @@ a:hover:after {
 	background-color: #101010;
 }
 
+/* Contact */
+
+#Contact {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+
+.MAP {
+	height: 50%;
+	width: 50%;
+	margin: 1em;
+}
+
 /* 
  */
+/*  */
+/*  */
+/*  */
+/*  */
+/*  */
+/*  */
+/*  */
+/*  */
+/*  */
+/*  */
+/*  */
+/*  */
+/*  */
+/*  */
+/*  */
+/*  */
+/*  */
+/*  */
+/*  */
+/*  */
+/*  */
+/*  */
+/*  */
+/*  */
+/*  */
+/*  */
+/*  */
+/*  */
+/*  */
+/*  */
+/*  */
+/*  */
+/*  */
+/*  */
+/*  */
+/*  */
+/*  */
+/*  */
+/*  */
+/*  */
 /*  */
 /*  */
 /*  */
@@ -576,13 +631,13 @@ a:hover:after {
 	}
 	.mobile-arcs-logo {
 		display: block;
-		height: 375px;
-		margin: 0 auto;
+		height: 350px;
+		margin: 0vh auto;
 		/* position: absolute; */
 		/* top: 0; */
 	}
 	.landing-data {
-		margin-top: 7em;
+		margin-top: 8.2em;
 	}
 	.landing-data-right p {
 		margin-top: 10px;
@@ -593,7 +648,7 @@ a:hover:after {
 	}
 
 	#About h3 {
-		font-size: 1.7em;
+		/* font-size: 1.7em; */
 		margin-top: 2em;
 		margin-left: 2rem;
 	}
@@ -601,6 +656,14 @@ a:hover:after {
 		font-size: 1.2em;
 		margin-right: 1.5em;
 		/* margin-bottom: 20px; */
+	}
+}
+
+@media only screen and (max-height: 570px) {
+	@media only screen and (max-width: 425px) {
+		.mobile-arcs-logo {
+			height: 290px;
+		}
 	}
 }
 
