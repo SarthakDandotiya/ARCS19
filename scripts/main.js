@@ -147,68 +147,71 @@ function lockScroll() {
 }
 
 // Carousel
-var showcase = $("#carousel");
-$("#carousel").Cloud9Carousel({
-	// yPos: 42,
-	yPos: 5,
-	xPos: 5,
-	yRadius: 100,
-	xRadius: 500,
-	farScale: 0.4,
-	buttonLeft: $("#buttons > .left"),
-	buttonRight: $("#buttons > .right"),
-	autoPlay: 1,
-	smooth: true,
-	bringToFront: true
+
+var ww;
+
+$(document).ready(function() {
+	ww = screen.width;
+
+	if (ww >= 1024) {
+		$("#carousel").Cloud9Carousel({
+			// yPos: 42,
+			yPos: 0,
+			xPos: 0,
+			yRadius: 100,
+			xRadius: 500,
+			farScale: 0.4,
+			buttonLeft: $("#buttons > .left"),
+			buttonRight: $("#buttons > .right"),
+			autoPlay: 1,
+			smooth: true,
+			bringToFront: true
+		});
+		console.log("bsdk");
+	} else if (ww < 1024 && ww >= 768) {
+		$("#carousel").Cloud9Carousel({
+			// yPos: 42,
+			yPos: 0,
+			xPos: 0,
+			yRadius: 70,
+			xRadius: 350,
+			farScale: 0.4,
+			buttonLeft: $("#buttons > .left"),
+			buttonRight: $("#buttons > .right"),
+			autoPlay: 1,
+			smooth: true,
+			bringToFront: true
+		});
+		// console.log("mc");
+	} else if (ww < 768 && ww >= 600) {
+		$("#carousel").Cloud9Carousel({
+			// yPos: 42,
+			yPos: 0,
+			xPos: 0,
+			yRadius: 60,
+			xRadius: 250,
+			farScale: 0.4,
+			buttonLeft: $("#buttons > .left"),
+			buttonRight: $("#buttons > .right"),
+			autoPlay: 1,
+			smooth: true,
+			bringToFront: true
+		});
+		console.log("bc");
+	} else if (ww < 600) {
+		$("#carousel").Cloud9Carousel({
+			// yPos: 42,
+			yPos: 0,
+			xPos: 0,
+			yRadius: -30,
+			xRadius: 150,
+			farScale: 0.4,
+			buttonLeft: $("#buttons > .left"),
+			buttonRight: $("#buttons > .right"),
+			autoPlay: 1,
+			autoPlayDelay: 2000,
+			smooth: true,
+			bringToFront: true
+		});
+	}
 });
-
-// $(function() {
-// 	var showcase = $("#showcase");
-
-// 	showcase.Cloud9Carousel({
-// 		yPos: 42,
-// 		yRadius: 48,
-// 		mirrorOptions: {
-// 			gap: 12,
-// 			height: 0.2
-// 		},
-// 		buttonLeft: $(".nav > .left"),
-// 		buttonRight: $(".nav > .right"),
-// 		autoPlay: true,
-// 		bringToFront: true,
-
-// 		onRendered: showcaseUpdated,
-// 		onLoaded: function() {
-// 			showcase.css("visibility", "visible");
-// 			showcase.css("display", "none");
-// 			showcase.fadeIn(1500);
-// 		}
-// 	});
-
-// 	function showcaseUpdated(showcase) {
-// 		var title = $("#item-title").html(
-// 			$(showcase.nearestItem()).attr("alt")
-// 		);
-
-// 		var c = Math.cos((showcase.floatIndex() % 1) * 2 * Math.PI);
-// 		title.css("opacity", 0.5 + 0.5 * c);
-// 	}
-
-// 	$(".nav > button").click(function(e) {
-// 		var b = $(e.target).addClass("down");
-// 		setTimeout(function() {
-// 			b.removeClass("down");
-// 		}, 80);
-// 	});
-
-// 	$(document).keydown(function(e) {
-// 		switch (e.keyCode) {
-// 			case 37:
-// 				$(".nav > .left").click();
-// 				break;
-
-// 			case 39:
-// 				$(".nav > .right").click();
-// 		}
-// 	});
-// });

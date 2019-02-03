@@ -444,7 +444,7 @@ a:hover:after {
 }
 
 #carousel {
-	position: absolute;
+	/* position: absolute; */
 	/* top: 10%; */
 	/* left: 5%; */
 	height: 70%;
@@ -481,7 +481,7 @@ a:hover:after {
 
 #buttons {
 	position: absolute;
-	bottom: 1em;
+	/* bottom: 3vw; */
 	/* left: 47%; */
 	width: 100%;
 	text-align: center;
@@ -576,6 +576,14 @@ a:hover:after {
 		font-size: 1.3em;
 	}
 }
+@media only screen and (max-width: 1024px) {
+	.event-card img {
+		height: 10em;
+	}
+	#buttons {
+		bottom: 5em;
+	}
+}
 
 @media only screen and (max-width: 900px) {
 	.landing-data-left p {
@@ -607,9 +615,13 @@ a:hover:after {
 		font-size: 1.8rem;
 	}
 
-	/* .contact-data {
-		width: 63%;
-	} */
+	.event-card img {
+		height: 9em;
+	}
+
+	#buttons {
+		bottom: 6em;
+	}
 }
 
 @media only screen and (max-width: 600px) {
@@ -738,6 +750,29 @@ a:hover:after {
 		height: 40%;
 		width: 80%;
 	}
+
+	#carousel {
+		margin-left: -3%;
+		margin-top: 5em;
+	}
+
+	.event-card {
+		background-color: #101010;
+		padding: 3em 1em;
+	}
+
+	#buttons {
+		position: absolute;
+		bottom: 10em;
+		margin-bottom: 0;
+	}
+
+	#Events h3 {
+		font-size: 1.7rem;
+		width: 100%;
+		text-align: center;
+		margin: 3em 0 1em 0;
+	}
 }
 
 @media only screen and (max-width: 425px) {
@@ -789,6 +824,16 @@ a:hover:after {
 	@media only screen and (max-width: 425px) {
 		.mobile-arcs-logo {
 			height: 290px;
+		}
+		#Events h3 {
+			font-size: 1.5rem;
+			width: 100%;
+			text-align: center;
+			margin: 2.5em 0 0.5em 0;
+		}
+
+		#buttons {
+			display: none;
 		}
 	}
 }
