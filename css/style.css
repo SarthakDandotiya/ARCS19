@@ -429,6 +429,80 @@ a:hover:after {
 	border-bottom: 2px solid #faa41a;
 }
 
+/* Events */
+
+#carousel .cloud9-item,
+#buttons button {
+	cursor: pointer;
+}
+
+#Events h3 {
+	font-size: 2rem;
+	width: 100%;
+	text-align: center;
+	margin: 3em 0 1em 0;
+}
+
+#carousel {
+	position: absolute;
+	/* top: 10%; */
+	/* left: 5%; */
+	height: 70%;
+	width: 100%;
+}
+.event-card a {
+	margin-top: 1em;
+}
+.event-card {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	/* height: 2em; */
+	width: 100%;
+	text-align: center;
+	/* padding-bottom: 1em; */
+	/* border-radius: 4px; */
+	/* border: 1px solid black; */
+	/* box-shadow: #101010;
+	padding: 1em 1em;
+	background: #222; */
+}
+
+.event-card img {
+	height: 15em;
+}
+
+.event-card a {
+	padding: 5px 10px;
+	border-radius: 4px;
+	border: 2px solid #faa41a;
+}
+
+#buttons {
+	position: absolute;
+	bottom: 1em;
+	/* left: 47%; */
+	width: 100%;
+	text-align: center;
+	/* margin: 0 0 2em 0; */
+}
+
+#buttons button {
+	width: 60px;
+	height: 30px;
+	color: #fff;
+	text-align: center;
+	background: #000;
+	border: none;
+	cursor: pointer;
+}
+
+#buttons button:focus {
+	border: none;
+	outline: none;
+}
+
 /* 
  */
 /*  */
