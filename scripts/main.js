@@ -235,5 +235,7 @@ $(document).ready(function() {
 // 	savedirection: true
 // });
 
+// testing
+
 // Modal
 // $("#demo01").animatedModal();
