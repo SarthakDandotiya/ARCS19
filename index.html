@@ -11,12 +11,6 @@
 			type="image/x-icon"
 		/>
 
-		<!-- <link
-			rel="stylesheet"
-			href="https://use.fontawesome.com/releases/v5.7.0/css/all.css"
-		/> -->
-
-		<!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script> -->
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 
 		<link
@@ -35,12 +29,12 @@
 		<link rel="stylesheet" href="./css/onepage-scroll.css" />
 		<script src="./scripts/jquery.onepage-scroll.min.js"></script>
 
-		<!-- <link rel="stylesheet" href="./node_modules/sal.js/dist/sal.css" /> -->
 		<link rel="stylesheet" href="./css/sal.css" />
+        <!-- <link rel="stylesheet" href="./css/animate.css" /> -->
 
-		<!-- <link rel="stylesheet" href="./css/curtains.css" /> -->
+        <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/animate.css/3.2.0/animate.min.css">
+
 		<link rel="stylesheet" href="./css/style.css" />
-		<!-- <link rel="stylesheet" href="./css/responsive.css" /> -->
 	</head>
 	<body>
 		<div class="chapter-logo">
@@ -193,20 +187,34 @@
 				</div>
 			</section>
 			<section id="Events">
-				<h3>Events</h3>
+                <h3>Events</h3>
+                <!-- modal01 -->
+                <div id="animatedModal">
+                        <!--THIS IS IMPORTANT! to close the modal, the class name has to match the name given on the ID  class="close-animatedModal" -->
+                        <div class="close-animatedModal"> 
+                            <img src="./images/down-chevron.svg" alt="close">
+                        </div>
+
+                        <div class="modal-content">
+                                <!--Your modal content goes here-->
+                                <p>
+                                        Machine learning uses computer to run predictive models that learn from existing data to forecast future behaviours, outcomes and trends. Deep learning, a sub field of machine learning where models inspired by how our brain works are expressed mathematically.
+                                        <br>
+                                        <br>
+                                        This workshop in the area of neural network and its applications aims to enhance the intellectuals towards the design of neural network for real time applications. This workshop aims to play a pivotal role by focussing the technical issues confronting neural network and its applications.
+                                        
+                                </p>
+                      </div>
+
+                </div>
 				<div id="carousel">
-					<!-- <img
-						class="cloud9-item"
-						src="./images/MachineLearning.png"
-						alt="Item #1"
-                    /> -->
 					<div class="cloud9-item">
 						<div class="event-card">
 							<img
 								src="./images/MachineLearning.png"
 								alt="Item #1"
 							/>
-							<a href="#"> Machine Learning </a>
+							<a href="#animatedModal" id="modal01" class="button"> Machine Learning </a>
 						</div>
 					</div>
 					<div class="cloud9-item">
@@ -236,36 +244,39 @@
 							<a href="#"> Cyber Security </a>
 						</div>
 					</div>
-					<!-- <img
-						class="cloud9-item"
-						src="./images/blockchain.png"
-						alt="Item #2"
-					/>
-					<img
-						class="cloud9-item"
-						src="./images/ui-ux.png"
-						alt="Item #3"
-					/>
-					<img
-						class="cloud9-item"
-						src="./images/cloud.png"
-						alt="Item #4"
-					/>
-					<img
-						class="cloud9-item"
-						src="./images/cyber-security.png"
-						alt="Item #5"
-					/> -->
-					<!-- <img class="cloud9-item" src="images/6.png" alt="Item #6" /> -->
-				</div>
+                </div>
+                <p id="item-title">&nbsp;</p>
 
 				<div id="buttons">
 					<button class="left">←</button>
 					<button class="right">→</button>
-				</div>
+                </div>
+                
 			</section>
 			<section id="Schedule">Schedule</section>
-			<section id="Sponsors">Sponsors</section>
+			<section id="Sponsors">
+                Sponsors
+				<div class="sponsor-data">
+					<!-- <marquee behavior="" direction="right">
+						<ul>
+							<li><img src="./images/ui-ux.png" alt="img" /></li>
+							<li><img src="./images/ui-ux.png" alt="img" /></li>
+							<li><img src="./images/ui-ux.png" alt="img" /></li>
+							<li><img src="./images/ui-ux.png" alt="img" /></li>
+							<li><img src="./images/ui-ux.png" alt="img" /></li>
+						</ul>
+                    </marquee> -->
+					<!-- <div class="marquee" id="mycrawler2">
+						<img src="./images/ui-ux.png" alt="img" />
+						<img src="./images/ui-ux.png" alt="img" />
+						<img src="./images/ui-ux.png" alt="img" />
+						<img src="./images/ui-ux.png" alt="img" />
+						<img src="./images/ui-ux.png" alt="img" />
+						<img src="./images/ui-ux.png" alt="img" />
+						<img src="./images/ui-ux.png" alt="img" />
+					</div>
+				</div> -->
+			</section>
 			<section id="Contact">
 				<h3
 					data-sal="slide-down"
@@ -321,7 +332,11 @@
 					<!-- <a href=""><img src="" alt=""></a> -->
 				</div>
 			</section>
-		</div>
+        </div>
+        <script src="./scripts/animatedModal.min.js"></script>
+        <script>
+                $("#modal01").animatedModal();
+        </script>
 	</body>
 	<!-- <script src="./scripts/scroll.js"></script> -->
 	<script src="./scripts/curtains.min.js"></script>
@@ -500,7 +515,29 @@
 		};
 	</script>
 	<script src="https://unpkg.com/typewriter-effect/dist/core.js"></script>
-	<!-- <script src="./node_modules/sal.js/dist/sal.js"></script> -->
+	<!-- <script type="text/javascript" src="crawler.js">
+
+		/* Text and/or Image Crawler Script v1.53 (c)2009-2011 John Davenport Scheuer
+		   as first seen in http://www.dynamicdrive.com/forums/
+		   username: jscheuer1 - This Notice Must Remain for Legal Use
+		*/
+	</script> -->
+	<!-- <script>
+		marqueeInit({
+			uniqueid: "mycrawler2",
+			style: {
+				padding: "2px",
+				width: "100%",
+				height: "10px"
+			},
+			inc: 15, //speed - pixel increment for each iteration of this marquee's movement
+			mouse: false, //mouseover behavior ('pause' 'cursor driven' or false)
+			moveatleast: 2,
+			neutral: 150,
+			savedirection: true
+			// random: true
+		});
+	</script> -->
 	<script src="./scripts/sal.js"></script>
 	<script>
 		sal({
@@ -508,6 +545,7 @@
 			once: false
 		});
 	</script>
-	<script src="./scripts/jquery.cloud9carousel.js"></script>
+    <script src="./scripts/jquery.cloud9carousel.js"></script>
+    <!-- <script src="./scripts/jquery.leanModal.min.js"></script> -->
 	<script src="./scripts/main.js"></script>
 </html>

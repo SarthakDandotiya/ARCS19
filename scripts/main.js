@@ -215,3 +215,25 @@ $(document).ready(function() {
 		});
 	}
 });
+
+// sdvinadvndvnsdv
+
+// Marquee Script
+// marqueeInit({
+// 	uniqueid: "mycrawler",
+// 	style: {
+// 		padding: "5px",
+// 		width: "450px",
+// 		background: "lightyellow",
+// 		border: "1px solid #CC3300"
+// 	},
+// 	inc: 5, //speed - pixel increment for each iteration of this marquee's movement
+// 	mouse: "cursor driven", //mouseover behavior ('pause' 'cursor driven' or false)
+// 	moveatleast: 2,
+// 	neutral: 150,
+// 	persist: true,
+// 	savedirection: true
+// });
+
+// Modal
+// $("#demo01").animatedModal();
