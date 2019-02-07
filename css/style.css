@@ -527,11 +527,6 @@ a:hover:after {
 	font-family: monospace;
 }
 
-#animatedModal {
-	position: absolute;
-	top: 200vh;
-}
-
 .close-animatedModal img {
 	height: 25px;
 }
