@@ -4,13 +4,13 @@ section:nth-child(1) {
 	background-image: url("../images/line_pattern.png");
 	background-size: cover;
 }
-section:nth-child(2) {
+section:nth-child(even) {
 	background-color: #222;
 }
-section:nth-child(3) {
+section:nth-child(odd) {
 	background-color: #1c1c1c;
 }
-section:nth-child(4) {
+/* section:nth-child(4) {
 	background-color: #222;
 }
 section:nth-child(5) {
@@ -18,7 +18,7 @@ section:nth-child(5) {
 }
 section:nth-child(6) {
 	background-color: #222;
-}
+} */
 
 /* GLOBAL */
 * {
@@ -533,23 +533,30 @@ a:hover:after {
 
 /* Sponsors */
 
-/* .sponsor-data {
-	height: 50%;
-	width: 100%;
-	margin: 5em 2em;
+#Sponsors {
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
 	align-items: center;
-} */
+}
 
-/* marquee ul {
+#Sponsors h3 {
+	font-size: 2rem;
+	/* padding: 1em; */
+}
+
+.sponsors-data {
 	display: flex;
 	flex-direction: row;
+	justify-content: space-around;
+	align-items: center;
+	flex-wrap: wrap;
 }
-marquee ul li img {
-	width: 50%;
-} */
+
+.sponsors-data img {
+	width: 18%;
+	margin: 2%;
+}
 
 /*  */
 /*  */

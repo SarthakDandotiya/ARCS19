@@ -56,14 +56,16 @@ var animateIn = new TimelineMax();
 
 // Typewriter
 
-var app = document.getElementById("app");
+$(document).ready(function() {
+	var app = document.getElementById("app");
 
-var typewriter = new Typewriter(app, {
-	loop: false,
-	cursor: ""
+	var typewriter = new Typewriter(app, {
+		loop: false,
+		cursor: ""
+	});
+
+	typewriter.typeString("ACCRETE<br>YOUR<br>KNOWLEDGE").start();
 });
-
-typewriter.typeString("ACCRETE<br>YOUR<br>KNOWLEDGE").start();
 
 // Scroll
 // Scroll Initialization & Settings
