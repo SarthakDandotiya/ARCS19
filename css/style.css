@@ -543,6 +543,7 @@ a:hover:after {
 #Sponsors h3 {
 	font-size: 2rem;
 	/* padding: 1em; */
+	margin-bottom: 15px;
 }
 
 .sponsors-data {
