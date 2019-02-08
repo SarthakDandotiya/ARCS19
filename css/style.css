@@ -571,28 +571,38 @@ a:hover:after {
 
 #Schedule h3 {
 	font-size: 2em;
+	/* display: none; */
 }
 
 .schedule-data {
-	margin: 2em;
-	height: 60%;
+	/* margin: 2em; */
+	margin-top: 5px;
+	max-height: 80%;
 	width: 90%;
+}
+
+.vtimeline-point {
+	margin-bottom: 4%;
 }
 
 .vtimeline-icon {
 	background: #faa41a;
+	height: 20px;
+	width: 20px;
 }
 
 .vtimeline-content {
 	color: #101010;
-	padding: 15px !important;
+	padding: 2% !important;
 	border-radius: 2px;
 }
 .vtimeline-date {
 	/* color: #000; */
+	font-size: 16px;
 	font-weight: 500 !important;
 	padding: 5px;
-	padding-bottom: 0;
+	border-radius: 2px 2px 0 0;
+	/* padding-bottom: 0; */
 }
 
 /*  */
@@ -674,6 +684,29 @@ a:hover:after {
 	}
 	#buttons {
 		bottom: 5em;
+	}
+}
+
+@media only screen and (max-width: 992px) {
+	.vtimeline-point {
+		margin-bottom: 4%;
+	}
+
+	.vtimeline-icon {
+		background: #faa41a;
+		height: 20px;
+		width: 20px;
+	}
+
+	.vtimeline-content {
+		color: #101010;
+		padding: 2% !important;
+		border-radius: 0 0 2px 2px;
+	}
+	.vtimeline-date {
+		color: #000;
+		font-size: 12px;
+		padding-left: 2%;
 	}
 }
 
@@ -876,6 +909,11 @@ a:hover:after {
 	.sponsors-data img {
 		width: 25%;
 		padding: 1%;
+	}
+
+	#Schedule h3 {
+		font-size: 1.5em;
+		margin-top: 2em;
 	}
 }
 
