@@ -221,21 +221,21 @@ $(document).ready(function() {
 
 // Timeline
 
-// if (screen.width >= 800) {
-// 	$(".timeline").timeline({
-// 		forceVerticalMode: 200,
-// 		mode: "horizontal",
-// 		visibleItems: 4
-// 	});
-// } else {
-// 	$(".timeline").timeline({
-// 		forceVerticalMode: 200,
-// 		mode: "horizontal",
-// 		visibleItems: 1
-// 	});
-// }
-$("#myTimeline").verticalTimeline({
-	startLeft: true,
-	alternate: true,
-	arrows: true
-});
+if (screen.width >= 800) {
+	$(".timeline").timeline({
+		forceVerticalMode: 200,
+		mode: "horizontal",
+		visibleItems: 4
+	});
+} else {
+	$(".timeline").timeline({
+		forceVerticalMode: 200,
+		mode: "horizontal",
+		visibleItems: 1
+	});
+}
+// $("#myTimeline").verticalTimeline({
+// 	startLeft: true,
+// 	alternate: true,
+// 	arrows: true
+// });

@@ -581,7 +581,7 @@ a:hover:after {
 	width: 90%;
 }
 
-.vtimeline-point {
+/* .vtimeline-point {
 	margin-bottom: 4%;
 }
 
@@ -597,13 +597,11 @@ a:hover:after {
 	border-radius: 2px;
 }
 .vtimeline-date {
-	/* color: #000; */
 	font-size: 16px;
 	font-weight: 500 !important;
 	padding: 5px;
 	border-radius: 2px 2px 0 0;
-	/* padding-bottom: 0; */
-}
+} */
 
 /*  */
 /*  */
@@ -687,7 +685,7 @@ a:hover:after {
 	}
 }
 
-@media only screen and (max-width: 992px) {
+/* @media only screen and (max-width: 992px) {
 	.vtimeline-point {
 		margin-bottom: 4%;
 	}
@@ -708,7 +706,7 @@ a:hover:after {
 		font-size: 12px;
 		padding-left: 2%;
 	}
-}
+} */
 
 @media only screen and (max-width: 900px) {
 	.landing-data-left p {
