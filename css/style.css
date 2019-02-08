@@ -559,6 +559,26 @@ a:hover:after {
 	margin: 2%;
 }
 
+/* Schedule */
+
+#Schedule {
+	display: flex;
+	width: 100%;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+
+#Schedule h3 {
+	font-size: 2em;
+}
+
+.schedule-data {
+	margin: 2em;
+	/* max-height: 90%; */
+	width: 90%;
+}
+
 /*  */
 /*  */
 /*  */

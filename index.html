@@ -18,10 +18,6 @@
 			rel="stylesheet"
 		/>
 		<link
-			href="https://fonts.googleapis.com/css?family=Major+Mono+Display"
-			rel="stylesheet"
-		/>
-		<link
 			href="https://fonts.googleapis.com/css?family=Lato:300"
 			rel="stylesheet"
 		/>
@@ -30,12 +26,9 @@
 		<script src="./scripts/jquery.onepage-scroll.min.js"></script>
 
 		<link rel="stylesheet" href="./css/sal.css" />
-		<!-- <link rel="stylesheet" href="./css/animate.css" /> -->
-
-		<link
-			rel="stylesheet"
-			href="//cdnjs.cloudflare.com/ajax/libs/animate.css/3.2.0/animate.min.css"
-		/>
+		<link rel="stylesheet" href="./css/animate.css" />
+		<link rel="stylesheet" href="./css/timeline.min.css" />
+		<!-- <link rel="stylesheet" href="./css/vertical-timeline.css" /> -->
 
 		<link rel="stylesheet" href="./css/style.css" />
 	</head>
@@ -273,7 +266,65 @@
 					<button class="right">→</button>
 				</div>
 			</section>
-			<section id="Schedule"></section>
+			<section id="Schedule">
+				<h3>Schedule</h3>
+				<div class="schedule-data">
+					<div class="timeline">
+						<div class="timeline__wrap">
+							<div class="timeline__items">
+								<div class="timeline__item">
+									<div class="timeline__content">
+										<p>27 March</p>
+										<p>
+											Inaugration Ceremony
+										</p>
+									</div>
+								</div>
+								<div class="timeline__item">
+									<div class="timeline__content">
+										<p>27 March</p>
+										<p>
+											Convoke Day 1
+										</p>
+									</div>
+								</div>
+								<div class="timeline__item">
+									<div class="timeline__content">
+										<p>28 March</p>
+										<p>
+											Workshops Day 1
+										</p>
+									</div>
+								</div>
+								<div class="timeline__item">
+									<div class="timeline__content">
+										<p>29 March</p>
+										<p>
+											Workshops Day 2
+										</p>
+									</div>
+								</div>
+								<div class="timeline__item">
+									<div class="timeline__content">
+										<p>30 March</p>
+										<p>
+											Convoke Day 2
+										</p>
+									</div>
+								</div>
+								<div class="timeline__item">
+									<div class="timeline__content">
+										<p>27 March</p>
+										<p>
+											Closing Ceremony
+										</p>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
 			<section id="Sponsors">
 				<h3>Sponsors</h3>
 				<div class="sponsors-data">
@@ -344,7 +395,7 @@
 						data-sal="fade"
 						data-sal-delay="400"
 						data-sal-easing="ease-in"
-						><img src="./images/twitter.svg" alt="twittwe"
+						><img src="./images/twitter.svg" alt="twitter"
 					/></a>
 					<!-- <a href=""><img src="" alt=""></a> -->
 				</div>
@@ -532,29 +583,7 @@
 		};
 	</script>
 	<script src="https://unpkg.com/typewriter-effect/dist/core.js"></script>
-	<!-- <script type="text/javascript" src="crawler.js">
 
-		/* Text and/or Image Crawler Script v1.53 (c)2009-2011 John Davenport Scheuer
-		   as first seen in http://www.dynamicdrive.com/forums/
-		   username: jscheuer1 - This Notice Must Remain for Legal Use
-		*/
-	</script> -->
-	<!-- <script>
-		marqueeInit({
-			uniqueid: "mycrawler2",
-			style: {
-				padding: "2px",
-				width: "100%",
-				height: "10px"
-			},
-			inc: 15, //speed - pixel increment for each iteration of this marquee's movement
-			mouse: false, //mouseover behavior ('pause' 'cursor driven' or false)
-			moveatleast: 2,
-			neutral: 150,
-			savedirection: true
-			// random: true
-		});
-	</script> -->
 	<script src="./scripts/sal.js"></script>
 	<script>
 		sal({
@@ -563,7 +592,8 @@
 		});
 	</script>
 	<script src="./scripts/jquery.cloud9carousel.js"></script>
-	<!-- <script src="./scripts/jquery.leanModal.min.js"></script> -->
+	<script src="./scripts/timeline.min.js"></script>
+	<!-- <script src="./scripts/vertical-timeline.min.js"></script> -->
 	<script src="./scripts/main.js"></script>
 </html>
 <!-- Test -->
