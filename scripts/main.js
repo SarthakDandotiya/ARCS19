@@ -207,7 +207,7 @@ $(document).ready(function() {
 			yPos: 0,
 			xPos: 0,
 			yRadius: -30,
-			xRadius: 150,
+			xRadius: 100,
 			farScale: 0.4,
 			buttonLeft: $("#buttons > .left"),
 			buttonRight: $("#buttons > .right"),
