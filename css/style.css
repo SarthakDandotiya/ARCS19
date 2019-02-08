@@ -575,8 +575,24 @@ a:hover:after {
 
 .schedule-data {
 	margin: 2em;
-	/* max-height: 90%; */
+	height: 60%;
 	width: 90%;
+}
+
+.vtimeline-icon {
+	background: #faa41a;
+}
+
+.vtimeline-content {
+	color: #101010;
+	padding: 15px !important;
+	border-radius: 2px;
+}
+.vtimeline-date {
+	/* color: #000; */
+	font-weight: 500 !important;
+	padding: 5px;
+	padding-bottom: 0;
 }
 
 /*  */
