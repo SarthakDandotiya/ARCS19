@@ -572,6 +572,7 @@ a:hover:after {
 #Schedule h3 {
 	font-size: 2em;
 	/* display: none; */
+	margin-bottom: 2em;
 }
 
 .schedule-data {
@@ -579,6 +580,23 @@ a:hover:after {
 	margin-top: 5px;
 	max-height: 80%;
 	width: 90%;
+}
+
+.timeline__item:after {
+	background-color: #faa41a;
+	border-color: #faa41a;
+}
+
+.timeline--horizontal .timeline-divider {
+	background-color: rgb(194, 194, 194);
+}
+
+.timeline-nav-button {
+	border-color: #777;
+}
+
+.timeline__date {
+	font-weight: 700;
 }
 
 /* .vtimeline-point {
@@ -878,7 +896,7 @@ a:hover:after {
 	}
 
 	#carousel {
-		margin-left: -3%;
+		margin-left: -2.5%;
 		margin-top: 5em;
 	}
 
