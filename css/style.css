@@ -520,22 +520,19 @@ a:hover:after {
 	z-index: 100;
 }
 
-#item-title {
-	position: absolute;
-	height: 50px;
-	width: 100%;
-	top: 5em;
-	color: #fff;
-	font-size: 30px;
-	letter-spacing: 0.13em;
-	text-align: center;
-	/* margin-top: -20px;
-	margin-bottom: 32px; */
-	font-family: monospace;
+/* Event Modals */
+
+.iziModal {
+	border-bottom: 3px solid #faa41a !important;
+}
+.iziModal .iziModal-header {
+	background-color: #222222 !important;
+	border-bottom: #faa41a 3px solid;
 }
 
-.close-animatedModal img {
-	height: 25px;
+.iziModal .iziModal-header.iziModal-noSubtitle .iziModal-header-title {
+	font-size: 1.15em;
+	font-family: "Montserrat", sans-serif !important;
 }
 
 /* Sponsors */

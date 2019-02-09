@@ -253,4 +253,6 @@ if (screen.width >= 800) {
 // });
 // MicroModal.init();
 
-$("#modal").iziModal();
+$("#modal-ml").iziModal({
+	overlayColor: "rgba(0,0,0,0.9)"
+});
