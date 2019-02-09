@@ -205,11 +205,19 @@
         var item = this.renderItem(i, radians);
 
         if (i === nearest) {
-          $(item.element).css({ "-webkit-filter": "blur(" + 0 + "px)" });
+          if (screen.width <= 600)
+            $(item.element).css({
+              "-webkit-filter": "blur(" + 0 + "px)",
+              filter: "blur" + 0 + "px)"
+            });
           $(item.element).addClass(this.frontItemClass);
         } else {
           // style.opacity = "0.3";
-          $(item.element).css({ "-webkit-filter": "blur(" + 5 + "px)" });
+          if (screen.width <= 600)
+            $(item.element).css({
+              "-webkit-filter": "blur(" + 4 + "px)",
+              filter: "blur" + 4 + "px)"
+            });
           $(item.element).removeClass(this.frontItemClass);
         }
         radians += spacing;
