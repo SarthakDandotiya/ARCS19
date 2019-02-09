@@ -530,7 +530,12 @@ a:hover:after {
 	border-bottom: #faa41a 3px solid;
 }
 
-.iziModal .iziModal-header.iziModal-noSubtitle .iziModal-header-title {
+.iziModal .iziModal-header-subtitle {
+	font-family: "Montserrat", sans-serif !important;
+	font-weight: 500 !important;
+}
+
+.iziModal .iziModal-header .iziModal-header-title {
 	font-size: 1.15em;
 	font-family: "Montserrat", sans-serif !important;
 }

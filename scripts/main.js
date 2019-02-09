@@ -256,3 +256,15 @@ if (screen.width >= 800) {
 $("#modal-ml").iziModal({
 	overlayColor: "rgba(0,0,0,0.9)"
 });
+$("#modal-ui").iziModal({
+	overlayColor: "rgba(0,0,0,0.9)"
+});
+$("#modal-bc").iziModal({
+	overlayColor: "rgba(0,0,0,0.9)"
+});
+$("#modal-c").iziModal({
+	overlayColor: "rgba(0,0,0,0.9)"
+});
+$("#modal-cs").iziModal({
+	overlayColor: "rgba(0,0,0,0.9)"
+});

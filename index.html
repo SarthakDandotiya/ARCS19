@@ -199,36 +199,15 @@
 			<section id="Highlights">Highlights</section>
 			<section id="Events">
 				<h3>Workshops</h3>
-				<!-- modal01 -->
-				<!-- <div id="animatedModal">
-					<div class="close-animatedModal">
-						<img src="./images/down-chevron.svg" alt="close" />
-					</div>
-
-					<div class="modal-content">
-						<p>
-							Machine learning uses computer to run predictive
-							models that learn from existing data to forecast
-							future behaviours, outcomes and trends. Deep
-							learning, a sub field of machine learning where
-							models inspired by how our brain works are expressed
-							mathematically.
-							<br />
-							<br />
-							This workshop in the area of neural network and its
-							applications aims to enhance the intellectuals
-							towards the design of neural network for real time
-							applications. This workshop aims to play a pivotal
-							role by focussing the technical issues confronting
-							neural network and its applications.
-						</p>
-					</div>
-				</div> -->
-				<!-- Modal structure -->
-				<div id="modal-ml" data-iziModal-title="Machine Learning">
+				<!-- Modals-->
+				<div
+					id="modal-ml"
+					data-iziModal-title="Machine Learning"
+					data-iziModal-subtitle="Venue: SJT <br> Price: ₹500"
+				>
 					<!-- data-iziModal-fullscreen="true"  data-iziModal-title="Welcome"  data-iziModal-subtitle="Subtitle"  data-iziModal-icon="icon-home" -->
 					<!-- Modal content -->
-					<p style="color:black; padding: 15px;">
+					<p style="color:black; padding: 15px;" align="justify">
 						Machine learning uses computer to run predictive models
 						that learn from existing data to forecast future
 						behaviours, outcomes and trends. Deep learning, a sub
@@ -245,10 +224,79 @@
 					</p>
 				</div>
 
-				<!-- Trigger to open Modal -->
-				<!-- <a href="https://github.com/dolce/iziModal" class="trigger"
-					>Modal</a
-				> -->
+				<div
+					id="modal-ui"
+					data-iziModal-title="UI/UX"
+					data-iziModal-subtitle="Venue: TT <br> Price: ₹500"
+				>
+					<p style="color:black; padding: 15px;" align="justify">
+						The leading industries right now are fusing tech and
+						design. Design is the new language of business thanks to
+						the start-up culture. Customers are increasingly taking
+						advantage of the options provided by the technology, to
+						choose the time, place and nature of their interactions
+						with an organization or their brand.
+						<br />
+						<br />
+						Participants will learn about the key steps involved in
+						designing seamless experiences. They will also get the
+						opportunity to internalize their understanding by
+						working on real world problems and exercises.
+					</p>
+				</div>
+
+				<div
+					id="modal-bc"
+					data-iziModal-title="Blockchain"
+					data-iziModal-subtitle="Venue: SJT <br> Price: ₹500"
+				>
+					<p style="color:black; padding: 15px;" align="justify">
+						Blockchain is a leading software platform for digital
+						assets. It is a data structure used to create a
+						decentralized ledger and is composed of blocks in a
+						serialized manner. This technology is implemented in
+						various real-time applications.
+						<br />
+						<br />
+						Cryptocurrencies, in particular the First and Ethereum,
+						are canonical examples of the blockchain paradigm. Few
+						other real-time applications include digital identity,
+						smart contracts, digital voting and IoT applications.
+						This workshop is planned by considering the growing
+						importance of Blockchain Technology in real world
+						applications.
+					</p>
+				</div>
+
+				<div
+					id="modal-c"
+					data-iziModal-title="Cloud"
+					data-iziModal-subtitle="Venue: SJT <br> Price: ₹500"
+				>
+					<p style="color:black; padding: 15px;" align="justify">
+						In the past, computing tasks such as word processing
+						were not possible without the installation of
+						application software on a user’s computer. A user bought
+						a license for each application from a software vendor
+						and obtained the right to install the application on
+						computer system. Cloud computing differs from the
+						classic client-server model by providing centralization
+						that gives cloud service providers complete control over
+						the browser-based applications provided to clients,
+						which removes the need for version upgrades or license
+						management on individual client computing devices.
+					</p>
+				</div>
+
+				<div
+					id="modal-cs"
+					data-iziModal-title="Cyber Security"
+					data-iziModal-subtitle="Venue: TT <br> Price: ₹500"
+				>
+					<p style="color:black; padding: 15px;" align="justify">
+						No - Data
+					</p>
+				</div>
 
 				<div id="carousel">
 					<div class="cloud9-item">
@@ -270,19 +318,40 @@
 					<div class="cloud9-item">
 						<div class="event-card">
 							<img src="./images/ui-ux.png" alt="Item #2" />
-							<a href="#" class="button"> UI/UX </a>
+							<a
+								href="#"
+								class="button"
+								data-izimodal-open="#modal-ui"
+								data-izimodal-transitionin="fadeInDown"
+							>
+								UI/UX
+							</a>
 						</div>
 					</div>
 					<div class="cloud9-item">
 						<div class="event-card">
 							<img src="./images/blockchain.png" alt="Item #3" />
-							<a href="#" class="button"> Block Chain </a>
+							<a
+								href="#"
+								class="button"
+								data-izimodal-open="#modal-bc"
+								data-izimodal-transitionin="fadeInDown"
+							>
+								Block Chain
+							</a>
 						</div>
 					</div>
 					<div class="cloud9-item">
 						<div class="event-card">
 							<img src="./images/cloud.png" alt="Item #4" />
-							<a href="#" class="button"> Cloud </a>
+							<a
+								href="#"
+								class="button"
+								data-izimodal-open="#modal-c"
+								data-izimodal-transitionin="fadeInDown"
+							>
+								Cloud
+							</a>
 						</div>
 					</div>
 					<div class="cloud9-item">
@@ -291,7 +360,14 @@
 								src="./images/cyber-security.png"
 								alt="Item #5"
 							/>
-							<a href="#" class="button"> Cyber Security </a>
+							<a
+								href="#"
+								class="button"
+								data-izimodal-open="#modal-cs"
+								data-izimodal-transitionin="fadeInDown"
+							>
+								Cyber Security
+							</a>
 						</div>
 					</div>
 				</div>
