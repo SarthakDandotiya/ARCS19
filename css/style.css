@@ -441,6 +441,13 @@ a:hover:after {
 	cursor: pointer;
 }
 
+#carousel .cloud9-item .event-card a.button:hover {
+	color: black;
+	background-color: #faa41a;
+	/* font-weight: bold; */
+	transition: 0.2s;
+}
+
 #Events h3 {
 	font-size: 2rem;
 	width: 100%;

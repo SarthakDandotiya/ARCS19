@@ -29,6 +29,11 @@
 		<!-- <script src="./scripts/jquery.onepage-scroll.min.js"></script> -->
 		<script src="./scripts/jquery.onepage-scroll.js"></script>
 
+		<link
+			rel="stylesheet"
+			href="https://cdnjs.cloudflare.com/ajax/libs/izimodal/1.5.1/css/iziModal.min.css"
+		/>
+
 		<link rel="stylesheet" href="./css/sal.css" />
 		<link rel="stylesheet" href="./css/animate.css" />
 		<link rel="stylesheet" href="./css/timeline.min.css" />
@@ -195,14 +200,12 @@
 			<section id="Events">
 				<h3>Workshops</h3>
 				<!-- modal01 -->
-				<div id="animatedModal">
-					<!--THIS IS IMPORTANT! to close the modal, the class name has to match the name given on the ID  class="close-animatedModal" -->
+				<!-- <div id="animatedModal">
 					<div class="close-animatedModal">
 						<img src="./images/down-chevron.svg" alt="close" />
 					</div>
 
 					<div class="modal-content">
-						<!--Your modal content goes here-->
 						<p>
 							Machine learning uses computer to run predictive
 							models that learn from existing data to forecast
@@ -220,7 +223,33 @@
 							neural network and its applications.
 						</p>
 					</div>
+				</div> -->
+				<!-- Modal structure -->
+				<div id="modal" data-iziModal-title="Machine Learning">
+					<!-- data-iziModal-fullscreen="true"  data-iziModal-title="Welcome"  data-iziModal-subtitle="Subtitle"  data-iziModal-icon="icon-home" -->
+					<!-- Modal content -->
+					<p style="color:black; padding: 15px;">
+						Machine learning uses computer to run predictive models
+						that learn from existing data to forecast future
+						behaviours, outcomes and trends. Deep learning, a sub
+						field of machine learning where models inspired by how
+						our brain works are expressed mathematically.
+						<br />
+						<br />
+						This workshop in the area of neural network and its
+						applications aims to enhance the intellectuals towards
+						the design of neural network for real time applications.
+						This workshop aims to play a pivotal role by focussing
+						the technical issues confronting neural network and its
+						applications.
+					</p>
 				</div>
+
+				<!-- Trigger to open Modal -->
+				<!-- <a href="https://github.com/dolce/iziModal" class="trigger"
+					>Modal</a
+				> -->
+
 				<div id="carousel">
 					<div class="cloud9-item">
 						<div class="event-card">
@@ -229,9 +258,10 @@
 								alt="Item #1"
 							/>
 							<a
-								href="#animatedModal"
-								id="modal01"
+								href="#"
 								class="button"
+								data-izimodal-open="#modal"
+								data-izimodal-transitionin="fadeInDown"
 							>
 								Machine Learning
 							</a>
@@ -240,19 +270,19 @@
 					<div class="cloud9-item">
 						<div class="event-card">
 							<img src="./images/ui-ux.png" alt="Item #2" />
-							<a href="#"> UI/UX </a>
+							<a href="#" class="button"> UI/UX </a>
 						</div>
 					</div>
 					<div class="cloud9-item">
 						<div class="event-card">
 							<img src="./images/blockchain.png" alt="Item #3" />
-							<a href="#"> Block Chain </a>
+							<a href="#" class="button"> Block Chain </a>
 						</div>
 					</div>
 					<div class="cloud9-item">
 						<div class="event-card">
 							<img src="./images/cloud.png" alt="Item #4" />
-							<a href="#"> Cloud </a>
+							<a href="#" class="button"> Cloud </a>
 						</div>
 					</div>
 					<div class="cloud9-item">
@@ -261,7 +291,7 @@
 								src="./images/cyber-security.png"
 								alt="Item #5"
 							/>
-							<a href="#"> Cyber Security </a>
+							<a href="#" class="button"> Cyber Security </a>
 						</div>
 					</div>
 				</div>
@@ -425,10 +455,10 @@
 				</div>
 			</section>
 		</div>
-		<script src="./scripts/animatedModal.min.js"></script>
+		<!-- <script src="./scripts/animatedModal.min.js"></script>
 		<script>
 			$("#modal01").animatedModal();
-		</script>
+		</script> -->
 	</body>
 	<!-- <script src="./scripts/scroll.js"></script> -->
 	<script src="./scripts/curtains.min.js"></script>
@@ -607,7 +637,7 @@
 		};
 	</script>
 	<script src="https://unpkg.com/typewriter-effect/dist/core.js"></script>
-
+	<!-- <script src="./scripts/micromodal.min.js"></script> -->
 	<script src="./scripts/sal.js"></script>
 	<script>
 		sal({
@@ -617,6 +647,7 @@
 	</script>
 	<script src="./scripts/jquery.cloud9carousel.js"></script>
 	<script src="./scripts/timeline.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/izimodal/1.5.1/js/iziModal.min.js"></script>
 	<!-- <script src="./scripts/vertical-timeline.min.js"></script> -->
 	<script src="./scripts/main.js"></script>
 </html>
