@@ -374,7 +374,8 @@ a:hover:after {
 	margin-bottom: 1em;
 }
 
-.btx {
+.btx,
+.btx2 {
 	color: #fff;
 	/* font-family: sans-serif; */
 	font-weight: bold;
@@ -392,16 +393,13 @@ a:hover:after {
 }
 
 .btx span,
-.btx i {
+.btx2 span {
 	display: inline-block;
 	z-index: 100;
 }
 
-.btx i {
-	font-style: normal;
-}
-
-.backgroundHover {
+.backgroundHover,
+.backgroundHover2 {
 	z-index: -1;
 	position: absolute;
 	top: 0;

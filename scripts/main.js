@@ -59,6 +59,10 @@ var button = document.querySelector(".btx"),
 	background = document.querySelector(".backgroundHover"),
 	firstWord = document.querySelectorAll(".btx span"),
 	secondWord = document.querySelectorAll(".btx i");
+var button2 = document.querySelector(".btx2"),
+	background2 = document.querySelector(".backgroundHover2"),
+	firstWord2 = document.querySelectorAll(".btx2 span"),
+	secondWord2 = document.querySelectorAll(".btx2 i");
 
 // Timeline
 var tl = new TimelineMax({ paused: true });
@@ -84,6 +88,29 @@ tl.from(
 	"#start"
 );
 
+var t2 = new TimelineMax({ paused: true });
+t2.staggerTo(
+	firstWord2,
+	1,
+	{ rotationX: 360, ease: Expo.easeOut },
+	0.03,
+	"#start2"
+);
+t2.staggerTo(
+	secondWord2,
+	1,
+	{ rotationX: 360, ease: Expo.easeOut },
+	0.03,
+	"#start2"
+);
+t2.to(button, 0.3, { ease: Quad.easeOut }, "#start2");
+t2.from(
+	background2,
+	0.25,
+	{ scaleX: "0%", transformOrigin: "left center", ease: Quad.easeInOut },
+	"#start2"
+);
+
 // HOVER
 button.addEventListener("mouseenter", function() {
 	tl.play();
@@ -91,6 +118,14 @@ button.addEventListener("mouseenter", function() {
 
 button.addEventListener("mouseleave", function() {
 	tl.reverse();
+});
+
+button2.addEventListener("mouseenter", function() {
+	t2.play();
+});
+
+button2.addEventListener("mouseleave", function() {
+	t2.reverse();
 });
 
 // Typewriter
