@@ -267,6 +267,7 @@ a:hover:after {
 	display: flex;
 	justify-content: center;
 	align-items: center;
+	margin-top: 10px;
 	transition: 0.2s;
 }
 
@@ -1090,7 +1091,7 @@ a:hover:after {
 	}
 }
 
-@media only screen and (max-height: 570px) {
+@media only screen and (max-height: 590px) {
 	@media only screen and (max-width: 425px) {
 		.mobile-arcs-logo {
 			height: 290px;
