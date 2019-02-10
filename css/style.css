@@ -900,7 +900,8 @@ a:hover:after {
 	}
 	.register-button {
 		font-size: 1em;
-		height: 12em;
+		height: 15em;
+		min-height: 3em;
 		/* line-height: 2.5em; */
 	}
 	#app {
