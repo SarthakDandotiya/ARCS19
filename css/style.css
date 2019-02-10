@@ -347,7 +347,7 @@ a:hover:after {
 }
 
 #About p {
-	margin: 1em 1em 2em 1em;
+	margin: 1em;
 	font-size: 1.8em;
 	/* line-height: 2em; */
 }
@@ -361,9 +361,9 @@ a:hover:after {
 	width: 100%;
 	margin: 0em 2em 0 2em;
 	display: flex;
-	flex-direction: row;
-	justify-content: flex-start;
-	word-wrap: none;
+	flex-direction: column;
+	justify-content: center;
+	align-items: flex-start;
 }
 
 .about-links a {
@@ -371,6 +371,44 @@ a:hover:after {
 	font-weight: 500;
 	/* text-decoration: none; */
 	margin-right: 2em;
+	margin-bottom: 1em;
+}
+
+.btx {
+	color: #fff;
+	/* font-family: sans-serif; */
+	font-weight: bold;
+	text-align: center;
+	text-decoration: none;
+	/* text-transform: uppercase; */
+	/* line-height: 50px; */
+
+	position: relative;
+	display: block;
+	/* height: 50px; */
+	/* width: 200px; */
+	/* margin: 5% auto; */
+	/* border: 1px solid #fff; */
+}
+
+.btx span,
+.btx i {
+	display: inline-block;
+	z-index: 100;
+}
+
+.btx i {
+	font-style: normal;
+}
+
+.backgroundHover {
+	z-index: -1;
+	position: absolute;
+	top: 0;
+	left: 0;
+	height: 100%;
+	width: 100%;
+	/* background: #fff; */
 }
 
 .line {
@@ -887,7 +925,7 @@ a:hover:after {
 
 	.about-links a {
 		font-size: 1em;
-		margin-bottom: 20px;
+		/* margin-bottom: 20px; */
 	}
 
 	.chapter-logo a img {

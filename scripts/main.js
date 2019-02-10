@@ -54,6 +54,45 @@ $(document).on("click", ".clickable", function() {
 var animateIn = new TimelineMax();
 // var scene = new ScrollMagic.Scene({}).setTween(animateIn);
 
+// Animations
+var button = document.querySelector(".btx"),
+	background = document.querySelector(".backgroundHover"),
+	firstWord = document.querySelectorAll(".btx span"),
+	secondWord = document.querySelectorAll(".btx i");
+
+// Timeline
+var tl = new TimelineMax({ paused: true });
+tl.staggerTo(
+	firstWord,
+	1,
+	{ rotationX: 360, ease: Expo.easeOut },
+	0.03,
+	"#start"
+);
+tl.staggerTo(
+	secondWord,
+	1,
+	{ rotationX: 360, ease: Expo.easeOut },
+	0.03,
+	"#start"
+);
+tl.to(button, 0.3, { ease: Quad.easeOut }, "#start");
+tl.from(
+	background,
+	0.25,
+	{ scaleX: "0%", transformOrigin: "left center", ease: Quad.easeInOut },
+	"#start"
+);
+
+// HOVER
+button.addEventListener("mouseenter", function() {
+	tl.play();
+});
+
+button.addEventListener("mouseleave", function() {
+	tl.reverse();
+});
+
 // Typewriter
 
 var app = document.getElementById("app");
