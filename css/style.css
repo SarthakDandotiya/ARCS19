@@ -257,16 +257,33 @@ a:hover:after {
 }
 
 .register-button {
-	/* height: 3em; */
+	height: 8em;
 	font-size: 1.3em;
 	font-weight: 500;
-	line-height: 3em;
+	/* line-height: 3em; */
 	text-align: center;
 	background-color: #faa41a;
 	width: 50%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	transition: 0.2s;
 }
-.register-button:active {
-	background-color: #e99724;
+
+/* .register-button:hover {
+	
+	transition: 0.2s;
+} */
+
+.register-button:hover {
+	background-color: #da8e24;
+	transition: 0.2s;
+}
+
+.reg-icon {
+	padding-left: 15px;
+	height: 15px;
+	width: 15px;
 }
 
 .landing-data-right {
@@ -801,8 +818,9 @@ a:hover:after {
 		font-size: 4em;
 	}
 	.register-button {
+		height: 3em;
 		font-size: 1em;
-		line-height: 2.5em;
+		/* line-height: 2.5em; */
 	}
 	#app {
 		font-size: 1.75em;
@@ -882,7 +900,8 @@ a:hover:after {
 	}
 	.register-button {
 		font-size: 1em;
-		line-height: 2.5em;
+		height: 12em;
+		/* line-height: 2.5em; */
 	}
 	#app {
 		text-align: left;
