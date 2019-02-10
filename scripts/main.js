@@ -328,17 +328,22 @@ if (screen.width >= 800) {
 // MicroModal.init();
 
 $("#modal-ml").iziModal({
-	overlayColor: "rgba(0,0,0,0.9)"
+	overlayColor: "rgba(0,0,0,0.9)",
+	zindex: 9999
 });
 $("#modal-ui").iziModal({
-	overlayColor: "rgba(0,0,0,0.9)"
+	overlayColor: "rgba(0,0,0,0.9)",
+	zindex: 9999
 });
 $("#modal-bc").iziModal({
-	overlayColor: "rgba(0,0,0,0.9)"
+	overlayColor: "rgba(0,0,0,0.9)",
+	zindex: 9999
 });
 $("#modal-c").iziModal({
-	overlayColor: "rgba(0,0,0,0.9)"
+	overlayColor: "rgba(0,0,0,0.9)",
+	zindex: 9999
 });
 $("#modal-cs").iziModal({
-	overlayColor: "rgba(0,0,0,0.9)"
+	overlayColor: "rgba(0,0,0,0.9)",
+	zindex: 9999
 });
