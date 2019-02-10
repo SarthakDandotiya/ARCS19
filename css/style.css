@@ -321,7 +321,7 @@ a:hover:after {
 
 .about-links a {
 	font-size: 2em;
-	background: linear-gradient(to bottom, #faa41a 0%, #faa41a 100%);
+	/* background: linear-gradient(to bottom, #faa41a 0%, #faa41a 100%); */
 	background-position: 0 100%;
 	background-repeat: repeat-x;
 	background-size: 3px 3px;
@@ -331,7 +331,7 @@ a:hover:after {
 
 .about-links a:hover {
 	/* background-image: url("../images/sw.svg"); */
-	background-image: url("data:image/svg+xml;charset=utf8,%3Csvg id='squiggle-link' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' xmlns:ev='http://www.w3.org/2001/xml-events' viewBox='0 0 20 4'%3E%3Cstyle type='text/css'%3E.squiggle{animation:shift .3s linear infinite;}@keyframes shift {from {transform:translateX(0);}to {transform:translateX(-20px);}}%3C/style%3E%3Cpath fill='none' stroke='#faa41a' stroke-width='2' class='squiggle' d='M0,3.5 c 5,0,5,-3,10,-3 s 5,3,10,3 c 5,0,5,-3,10,-3 s 5,3,10,3'/%3E%3C/svg%3E");
+	/* background-image: url("data:image/svg+xml;charset=utf8,%3Csvg id='squiggle-link' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' xmlns:ev='http://www.w3.org/2001/xml-events' viewBox='0 0 20 4'%3E%3Cstyle type='text/css'%3E.squiggle{animation:shift .3s linear infinite;}@keyframes shift {from {transform:translateX(0);}to {transform:translateX(-20px);}}%3C/style%3E%3Cpath fill='none' stroke='#faa41a' stroke-width='2' class='squiggle' d='M0,3.5 c 5,0,5,-3,10,-3 s 5,3,10,3 c 5,0,5,-3,10,-3 s 5,3,10,3'/%3E%3C/svg%3E"); */
 	background-position: 0 100%;
 	background-size: auto 6px;
 	background-repeat: repeat-x;
@@ -361,8 +361,8 @@ a:hover:after {
 	width: 100%;
 	margin: 0em 2em 0 2em;
 	display: flex;
-	flex-direction: column;
-	justify-content: center;
+	flex-direction: row;
+	justify-content: flex-start;
 	align-items: flex-start;
 }
 
@@ -376,6 +376,9 @@ a:hover:after {
 
 .btx,
 .btx2 {
+	font-size: 1.5em !important;
+	margin-left: -10px;
+	padding: 5px 10px;
 	color: #fff;
 	/* font-family: sans-serif; */
 	font-weight: bold;
@@ -389,7 +392,16 @@ a:hover:after {
 	/* height: 50px; */
 	/* width: 200px; */
 	/* margin: 5% auto; */
-	/* border: 1px solid #fff; */
+	border: 1px solid #faa41a;
+	border-radius: 3px;
+	transition: 0.2s;
+}
+
+.btx:hover,
+.btx2:hover {
+	color: black;
+	background-color: #faa41a;
+	transition: 0.2s;
 }
 
 .btx span,
@@ -924,6 +936,13 @@ a:hover:after {
 	.about-links a {
 		font-size: 1em;
 		/* margin-bottom: 20px; */
+	}
+
+	.btx,
+	.btx2 {
+		font-size: 1em !important;
+		padding: 2px 5px;
+		margin-left: -5px;
 	}
 
 	.chapter-logo a img {
