@@ -1046,8 +1046,8 @@ a:hover:after {
 	}
 
 	#Highlights h3 {
-		font-size: 1.5em;
-		margin: 4em 0 1em 0;
+		font-size: 1.7em;
+		margin: 4em 0 2em 0;
 	}
 
 	.highlights-data {
@@ -1058,12 +1058,18 @@ a:hover:after {
 		flex-direction: row;
 		justify-content: space-evenly;
 		align-items: center;
-		width: 30%;
-		/* margin: 0em; */
+		width: 35%;
+		margin-bottom: 3em;
+	}
+
+	.highlights-data-card img {
+		margin: 0em !important;
+		/* width: 100%; */
 	}
 
 	.highlights-data-card p {
-		margin-left: 10px;
+		margin-left: 10%;
+		font-size: 1em;
 	}
 }
 
