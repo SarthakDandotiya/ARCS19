@@ -369,3 +369,7 @@ function showSlides() {
 	dots[slideIndex - 1].className += " active";
 	setTimeout(showSlides, 2500); // Change image every 2 seconds
 }
+
+function no_reg() {
+	alert("Registrations not open yet!");
+}
