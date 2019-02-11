@@ -292,7 +292,7 @@ $(document).ready(function() {
 
 // Timeline
 
-if (screen.width >= 800) {
+if (screen.width >= 600) {
 	$(".timeline").timeline({
 		forceVerticalMode: 200,
 		mode: "horizontal",
@@ -352,3 +352,7 @@ function showSlides() {
 function no_reg() {
 	alert("Registrations not open yet!");
 }
+
+$(document).bind("touchmove", function(e) {
+	e.preventDefault();
+});
