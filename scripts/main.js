@@ -1,5 +1,3 @@
-// var controller = new ScrollMagic.Controller();
-
 // Navbar
 $(document).on("scroll", function(e) {
 	$(".menu").css({
@@ -23,7 +21,6 @@ t1.to(".two", 0.25, {
 });
 
 t1.to(".menu", 0.8, {
-	// top: 100 % +$(document).scrollTop(),
 	left: "0%",
 	ease: Expo.easeInOut,
 	delay: -0.25
@@ -52,7 +49,6 @@ $(document).on("click", ".clickable", function() {
 
 // Main Animations
 var animateIn = new TimelineMax();
-// var scene = new ScrollMagic.Scene({}).setTween(animateIn);
 
 // Animations
 var button = document.querySelector(".btx"),
@@ -308,24 +304,6 @@ if (screen.width >= 800) {
 		visibleItems: 1
 	});
 }
-// $("#myTimeline").verticalTimeline({
-// 	startLeft: true,
-// 	alternate: true,
-// 	arrows: true
-// });
-
-// Modal
-// MicroModal.init({
-// 	onShow: modal => console.info(`${modal.id} is shown`), // [1]
-// 	onClose: modal => console.info(`${modal.id} is hidden`), // [2]
-// 	// openTrigger: 'data-custom-open', // [3]
-// 	// closeTrigger: 'data-custom-close', // [4]
-// 	disableScroll: true, // [5]
-// 	disableFocus: false, // [6]
-// 	awaitCloseAnimation: false, // [7]
-// 	debugMode: true // [8]
-// });
-// MicroModal.init();
 
 $("#modal-ml").iziModal({
 	overlayColor: "rgba(0,0,0,0.9)",
