@@ -284,6 +284,7 @@ $(document).ready(function() {
 			autoPlay: 1,
 			autoPlayDelay: 2000,
 			smooth: true,
+			frontItemClass: "card-shadow",
 			bringToFront: true
 		});
 	}
