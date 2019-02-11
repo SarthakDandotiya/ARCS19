@@ -2801,6 +2801,7 @@ img {
 	}
 
 	.event-card {
+		border:3px solid white;
 		background-color: #101010;
 		padding: 3em 1em;
 	}
