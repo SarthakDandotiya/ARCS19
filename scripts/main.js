@@ -141,7 +141,7 @@ $(document).ready(function() {
   $(".main").onepage_scroll({
     sectionContainer: "section",
     easing: "ease",
-    animationTime: 700,
+    animationTime: 800,
     loop: false,
     // pagination: true,
     direction: "vertical",
