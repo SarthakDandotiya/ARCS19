@@ -2923,6 +2923,7 @@ img {
 	#carousel {
 		margin-left: -6%;
 		margin-top: 1em;
+		transform: scale(0.8);
 	}
 
 	.sponsors-data img {
