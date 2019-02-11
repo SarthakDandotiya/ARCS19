@@ -2965,3 +2965,22 @@ img {
 		font-size: 1.1em;
 	}
 }
+
+@media only screen and (max-width: 330px) {
+	#app {
+		font-size: 0.8em;
+	}
+	.landing-data-right p {
+		font-size: 0.85em;
+	}
+	.landing-data-left p {
+		font-size: 3em;
+	}
+	#About p {
+		font-size: 0.8em;
+	}
+	.about-links {
+		font-size: 0.8em;
+		padding-left: 1em;
+	}
+}
