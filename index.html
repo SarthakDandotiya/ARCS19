@@ -28,6 +28,16 @@
 		<link rel="stylesheet" href="./css/merge.css" />
 	</head>
 	<body style="overscroll-behavior: none;">
+		<div class="pre-wrapper">
+			<div class="preloader">
+				<div class="loader__bar" style="background:#FBA04B"></div>
+				<div class="loader__bar" style="background:#E34791"></div>
+				<div class="loader__bar" style="background:#A3416D"></div>
+				<div class="loader__bar" style="background:#77025A"></div>
+				<div class="loader__bar" style="background:#390049"></div>
+				<div class="loader__ball" style="background:#FFF"></div>
+			</div>
+		</div>
 		<div class="chapter-logo">
 			<a href="http://ieeecsvit.com">
 				<img src="./images/IEEECSlogo.png" alt="IEEECS Logo" />
@@ -752,6 +762,16 @@
 			}
 		};
 	</script>
+	<script>
+		$(document).ready(function() {
+			//Preloader
+			$(window).on("load", function() {
+				$(".pre-wrapper").fadeOut(500, () => {
+					$(".pre-wrapper").css("display", "none");
+				});
+			});
+		});
+	</script>
 	<script src="https://unpkg.com/typewriter-effect/dist/core.js"></script>
 	<script src="./scripts/sal.js"></script>
 	<script>
@@ -766,4 +786,3 @@
 
 	<script src="./scripts/main.js"></script>
 </html>
-<!-- Test -->
