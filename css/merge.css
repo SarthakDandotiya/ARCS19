@@ -2361,7 +2361,7 @@ a:hover:after {
 	/* margin: 2em; */
 	margin-top: 5px;
 	max-height: 80%;
-	width: 90%;
+	width: 95%;
 }
 
 .timeline__item:after {
@@ -2379,6 +2379,11 @@ a:hover:after {
 
 .timeline__date {
 	font-weight: 700;
+}
+
+.timeline__content {
+	/* padding: 1rem 0.8rem; */
+	padding: 1rem;
 }
 
 #Highlights {

@@ -304,7 +304,7 @@ if (screen.width >= 600) {
 	$(".timeline").timeline({
 		forceVerticalMode: 200,
 		mode: "horizontal",
-		visibleItems: 1
+		visibleItems: 2
 	});
 }
 
