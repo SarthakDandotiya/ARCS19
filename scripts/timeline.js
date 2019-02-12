@@ -203,30 +203,6 @@ function timeline(e, v) {
 						}),
 							(a.scroller.style.height = l + n + "px");
 					}
-					a.items.forEach(function(e, t) {
-						e.style.height = "auto";
-						var i = e.offsetHeight;
-						t % 2 == 0 ? (l = l < i ? i : l) : (n = n < i ? i : n);
-					});
-					var i = "translateY(" + l + "px)";
-					a.items.forEach(function(e, t) {
-						t % 2 == 0
-							? ((e.style.height = l + "px"),
-							  "bottom" === a.settings.horizontalStartPosition
-									? (e.classList.add(
-											"timeline__item--bottom"
-									  ),
-									  d(e, i))
-									: e.classList.add("timeline__item--top"))
-							: ((e.style.height = n + "px"),
-							  "bottom" !== a.settings.horizontalStartPosition
-									? (e.classList.add(
-											"timeline__item--bottom"
-									  ),
-									  d(e, i))
-									: e.classList.add("timeline__item--top"));
-					}),
-						(a.scroller.style.height = l + n + "px");
 				})()),
 			c(e),
 			(function(e) {
