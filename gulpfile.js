@@ -42,13 +42,13 @@ gulp.task("images", function() {
     .pipe(
       responsive(
         {
-          "*.jpg": { width: "50%" },
-          "*.png": { width: "50%" }
+          "*.jpg": { width: "40%" },
+          "*.png": { width: "40%" }
         },
         {
           quality: 50,
           progressive: true,
-          compressionLevel: 6,
+          compressionLevel: 4,
           withMetadata: false
         }
       )
