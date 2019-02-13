@@ -622,7 +622,6 @@
 		</div>
 	</body>
 	<script src="./scripts/curtains.min.js"></script>
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.0.2/TweenMax.min.js"></script>
 	<!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.6/plugins/animation.gsap.min.js"></script> -->
 	<script id="plane-vs" type="x-shader/x-vertex">
 		#ifdef GL_ES
@@ -651,25 +650,25 @@
 		varying vec2 vTextureCoord;
 
 		void main() {
-		  vec3 vertexPosition = aVertexPosition;
+			vec3 vertexPosition = aVertexPosition;
 
-		  // get the distance between our vertex and the mouse position
-		  float distanceFromMouse = distance(uMousePosition, vec2(vertexPosition.x, vertexPosition.y));
+			// get the distance between our vertex and the mouse position
+			float distanceFromMouse = distance(uMousePosition, vec2(vertexPosition.x, vertexPosition.y));
 
-		  // this will define how close the ripples will be from each other. The bigger the number, the more ripples you'll get
-		  float rippleFactor = 4.5;
-		  // calculate our ripple effect
-		  float rippleEffect = cos(rippleFactor * (distanceFromMouse - (uTime / 140.0)));
+			// this will define how close the ripples will be from each other. The bigger the number, the more ripples you'll get
+			float rippleFactor = 4.5;
+			// calculate our ripple effect
+			float rippleEffect = cos(rippleFactor * (distanceFromMouse - (uTime / 140.0)));
 
-		  // calculate our distortion effect
-		  float distortionEffect = rippleEffect * uMouseStrength;
+			// calculate our distortion effect
+			float distortionEffect = rippleEffect * uMouseStrength;
 
-		  // apply it to our vertex position
-		  vertexPosition +=  distortionEffect / 70.0;
+			// apply it to our vertex position
+			vertexPosition +=  distortionEffect / 70.0;
 
 			gl_Position = uPMatrix * uMVMatrix * vec4(vertexPosition, 1.0);
 
-		  // varyings
+			// varyings
 			vTextureCoord = aTextureCoord;
 			vVertexPosition = vertexPosition;
 		}
@@ -687,21 +686,21 @@
 		uniform sampler2D uSampler0;
 
 		void main() {
-		  // get our texture coords
-		  vec2 textureCoords = vTextureCoord;
+			// get our texture coords
+			vec2 textureCoords = vTextureCoord;
 
-		  // apply our texture
-		  vec4 finalColor = texture2D(uSampler0, textureCoords);
+			// apply our texture
+			vec4 finalColor = texture2D(uSampler0, textureCoords);
 
-		  // fake shadows based on vertex position along Z axis -0.1
-		  finalColor.rgb -= clamp(-vVertexPosition.z, 0.0, 0.9);
-		  // fake lights based on vertex position along Z axis 0.0001
-		  finalColor.rgb += clamp(vVertexPosition.z, 0.0, 0.9);
+			// fake shadows based on vertex position along Z axis -0.1
+			finalColor.rgb -= clamp(-vVertexPosition.z, 0.0, 0.9);
+			// fake lights based on vertex position along Z axis 0.0001
+			finalColor.rgb += clamp(vVertexPosition.z, 0.0, 0.9);
 
-		  // handling premultiplied alpha (useful if we were using a png with transparency)
-		  finalColor = vec4(finalColor.rgb * finalColor.a, finalColor.a);
+			// handling premultiplied alpha (useful if we were using a png with transparency)
+			finalColor = vec4(finalColor.rgb * finalColor.a, finalColor.a);
 
-		  gl_FragColor = finalColor;
+			gl_FragColor = finalColor;
 		}
 	</script>
 	<script>
@@ -794,19 +793,20 @@
 		};
 	</script>
 	<script src="https://unpkg.com/typewriter-effect/dist/core.js"></script>
-	<script src="./scripts/sal.js"></script>
+	<!-- <script src="./scripts/sal.js"></script> -->
+	<!-- <script src="./scripts/jquery.cloud9carousel.js"></script> -->
+	<!-- <script src="./scripts/timeline.js"></script> -->
+	<!-- <script src="./scripts/iziModal.min.js"></script> -->
+
+	<!-- <script src="./scripts/main.js"></script> -->
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.0.2/TweenMax.min.js"></script>
+	<script src="./scripts/merge.js"></script>
 	<script>
 		sal({
 			threshold: 0.75,
 			once: false
 		});
 	</script>
-	<!-- <script src="./scripts/jquery.cloud9carousel.js"></script> -->
-	<!-- <script src="./scripts/timeline.js"></script> -->
-	<!-- <script src="./scripts/iziModal.min.js"></script> -->
-
-	<!-- <script src="./scripts/main.js"></script> -->
-	<script src="./scripts/merge.js"></script>
 	<script>
 		$(document).ready(function() {
 			//Preloader
