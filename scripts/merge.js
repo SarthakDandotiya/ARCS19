@@ -3089,16 +3089,16 @@ button2.addEventListener("mouseleave", function() {
 
 // Typewriter
 
-var app = document.getElementById("app");
+// var app = document.getElementById("app");
 
-var typewriter = new Typewriter(app, {
-	loop: false,
-	cursor: ""
-});
+// var typewriter = new Typewriter(app, {
+// 	loop: false,
+// 	cursor: ""
+// });
 
-setTimeout(() => {
-	typewriter.typeString("ACCRETE<br>YOUR<br>KNOWLEDGE").start();
-}, 2000);
+// setTimeout(() => {
+// 	typewriter.typeString("ACCRETE<br>YOUR<br>KNOWLEDGE").start();
+// }, 2000);
 
 // Scroll
 // Scroll Initialization & Settings

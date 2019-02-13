@@ -2991,7 +2991,150 @@ img {
   
   
 
+  * {
+	--animation-delay: 5s;
+	--duration: 1000ms;
+	--iterations: 1;
+}
+/* ••·•·•·•·•·•·•·•·•·•·•·•·•·•·•·•·•·•·•·•·•·•·•·•·•·•·•·•· */
 
+
+/* body {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	height: 100vh;
+	background-color: #8ce2ea;
+	flex-direction: column;
+} */
+
+.reveal-text,
+.reveal-text::after {
+	-webkit-animation-delay: 5s;
+	        animation-delay: 5s;
+	-webkit-animation-delay: var(--animation-delay);
+	        animation-delay: var(--animation-delay);
+	-webkit-animation-iteration-count: 1;
+	        animation-iteration-count: 1;
+	-webkit-animation-iteration-count: var(--iterations);
+	        animation-iteration-count: var(--iterations);
+	-webkit-animation-duration: 1000ms;
+	        animation-duration: 1000ms;
+	-webkit-animation-duration: var(--duration);
+	        animation-duration: var(--duration);
+	-webkit-animation-fill-mode: both;
+	        animation-fill-mode: both;
+	-webkit-animation-timing-function: cubic-bezier(0.0, 0.0, 0.2, 1);
+	        animation-timing-function: cubic-bezier(0.0, 0.0, 0.2, 1);
+}
+
+.reveal-text {
+	position: relative;
+	font-size: 10vw;
+	display: block;
+	-webkit-user-select: none;
+	        -moz-user-select: none;
+	         -ms-user-select: none;
+	     user-select: none;
+	-webkit-animation-name: clip-text;
+	        animation-name: clip-text;
+	color: #FFF;
+	white-space: nowrap;
+	cursor: default
+	
+}
+
+.reveal-text::after {
+		content: "";
+		position: absolute;
+		z-index: 999;
+		top: 0;
+		left: 0;
+		right: 0;
+		bottom: 0;
+		background-color: #f2f98b;
+		-webkit-transform: scaleX(0);
+		        transform: scaleX(0);
+		-webkit-transform-origin: 0 50%;
+		        transform-origin: 0 50%;
+		pointer-events: none;
+		-webkit-animation-name: text-revealer;
+		        animation-name: text-revealer;
+	}
+
+
+@-webkit-keyframes clip-text {
+	from {
+		-webkit-clip-path: inset(0 100% 0 0);
+		        clip-path: inset(0 100% 0 0);
+	}
+	to {
+		-webkit-clip-path: inset(0 0 0 0);
+		        clip-path: inset(0 0 0 0);
+	}
+}
+
+
+@keyframes clip-text {
+	from {
+		-webkit-clip-path: inset(0 100% 0 0);
+		        clip-path: inset(0 100% 0 0);
+	}
+	to {
+		-webkit-clip-path: inset(0 0 0 0);
+		        clip-path: inset(0 0 0 0);
+	}
+}
+
+
+@-webkit-keyframes text-revealer {
+	
+	0%, 50% {
+		-webkit-transform-origin: 0 50%;
+		        transform-origin: 0 50%;
+	}
+	
+	60%, 100% {
+		-webkit-transform-origin: 100% 50%;
+		        transform-origin: 100% 50%;		
+	}
+
+	
+	60% {
+		-webkit-transform: scaleX(1);
+		        transform: scaleX(1);
+	}
+	
+	100% {
+		-webkit-transform: scaleX(0);
+		        transform: scaleX(0);
+	}
+}
+
+
+@keyframes text-revealer {
+	
+	0%, 50% {
+		-webkit-transform-origin: 0 50%;
+		        transform-origin: 0 50%;
+	}
+	
+	60%, 100% {
+		-webkit-transform-origin: 100% 50%;
+		        transform-origin: 100% 50%;		
+	}
+
+	
+	60% {
+		-webkit-transform: scaleX(1);
+		        transform: scaleX(1);
+	}
+	
+	100% {
+		-webkit-transform: scaleX(0);
+		        transform: scaleX(0);
+	}
+}
 /*  */
 /*  */
 /*  */
