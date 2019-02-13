@@ -3108,6 +3108,14 @@ img {
 }
 
 @media only screen and (max-width: 600px) {
+	.one,.two {
+		width: 25
+	}
+
+	.toggle-btn {
+		margin: 0.65em 1em;
+	}
+
 	#canvas {
 		height: 45vh;
 		margin: 1em 0 0 0;
@@ -3156,7 +3164,7 @@ img {
 	.register-button {
 		font-size: 1em;
 		height: 15em;
-		min-height: 3em;
+		min-height: 2.7em;
 	}
 	#app {
 		text-align: left;
@@ -3212,7 +3220,7 @@ img {
 	}
 
 	.chapter-logo a img {
-		height: 40px;
+		height: 35px;
 	}
 
 	.landing-data {
@@ -3341,8 +3349,8 @@ img {
 	}
 	.mobile-arcs-logo {
 		display: block;
-		height: 350px;
-		margin: 0vh auto;
+		height: 330px;
+		margin: 1vh auto;
 	}
 	.landing-data {
 		margin-top: 8.2em;
@@ -3393,9 +3401,9 @@ img {
 			margin: 2.5em 0 0.5em 0;
 		}
 
-		#buttons {
+		/* #buttons {
 			display: none;
-		}
+		} */
 	}
 }
 
