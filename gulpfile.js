@@ -4,9 +4,16 @@ const cleanCSS = require("gulp-clean-css");
 const htmlmin = require("gulp-htmlmin");
 const uglify = require("gulp-uglify");
 const purgecss = require("gulp-purgecss");
+const responsive = require("gulp-responsive");
 
 // gulp.task("default", ["minifyHTML", "minifyImg", "minifyJS", "purgeCSS"]);
-gulp.task("default", ["minifyHTML", "minifyImg", "minifyJS", "purgeCSS"]);
+gulp.task("default", [
+  "minifyHTML",
+  "minifyImg",
+  "minifyJS",
+  "purgeCSS",
+  "images"
+]);
 
 /**
  * CSS Minification
@@ -27,6 +34,29 @@ gulp.task("minifyJS", () => {
     .src("src/scripts/*.js")
     .pipe(uglify())
     .pipe(gulp.dest("./scripts"));
+});
+
+gulp.task("images", function() {
+  return gulp
+    .src("src/images/*.{jpg,png}")
+    .pipe(
+      responsive(
+        {
+          "*.jpg": { width: 200 },
+          "*.png": { width: "50%" },
+          "*": {
+            width: 100
+          }
+        },
+        {
+          quality: 70,
+          progressive: true,
+          compressionLevel: 6,
+          withMetadata: false
+        }
+      )
+    )
+    .pipe(gulp.dest("./images"));
 });
 
 /**
