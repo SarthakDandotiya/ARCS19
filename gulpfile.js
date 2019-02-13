@@ -23,9 +23,9 @@ gulp.task("purgeCSS", () => {
  */
 gulp.task("minifyJS", () => {
   gulp
-    .src("src/js/*.js")
+    .src("src/scripts/*.js")
     .pipe(uglify())
-    .pipe(gulp.dest("./js"));
+    .pipe(gulp.dest("./scripts"));
 });
 
 /**
@@ -37,12 +37,6 @@ gulp.task("minifyImg", () => {
     .src("src/images/*")
     .pipe(imagemin())
     .pipe(gulp.dest("./images"));
-
-  // Logos
-  gulp
-    .src("src/logos/*")
-    .pipe(imagemin())
-    .pipe(gulp.dest("./logos"));
 });
 
 /**
