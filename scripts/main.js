@@ -298,13 +298,15 @@ if (screen.width >= 600) {
 	$(".timeline").timeline({
 		forceVerticalMode: 200,
 		mode: "horizontal",
-		visibleItems: 4
+		visibleItems: 4,
+		moveItems: 2
 	});
 } else {
 	$(".timeline").timeline({
 		forceVerticalMode: 200,
 		mode: "horizontal",
-		visibleItems: 1
+		visibleItems: 1,
+		moveItems: 1
 	});
 }
 
