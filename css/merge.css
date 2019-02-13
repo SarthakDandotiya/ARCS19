@@ -2559,6 +2559,10 @@ img {
 	opacity: 1;
 }
 
+.app span {
+	margin: 0;
+	padding: 0;
+}
 
 /* Preloader */
 .pre-wrapper {
@@ -3322,7 +3326,7 @@ img {
 	.landing-data-right p {
 		font-size: 1.1em;
 		text-align: right;
-		width: 100%;
+		/* width: 100%; */
 		margin-top: 1em;
 		margin-right: 2em;
 	}
