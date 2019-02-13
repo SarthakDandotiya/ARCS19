@@ -5,6 +5,7 @@ const htmlmin = require("gulp-htmlmin");
 const uglify = require("gulp-uglify");
 const purgecss = require("gulp-purgecss");
 
+// gulp.task("default", ["minifyHTML", "minifyImg", "minifyJS", "purgeCSS"]);
 gulp.task("default", ["minifyHTML", "minifyImg", "minifyJS", "purgeCSS"]);
 
 /**
@@ -14,7 +15,7 @@ gulp.task("purgeCSS", () => {
   gulp
     .src("src/css/*.css")
     .pipe(cleanCSS({ compatibility: "ie8" }))
-    .pipe(purgecss({ content: ["src/index.html"] }))
+    // .pipe(purgecss({ content: ["src/index.html"] }))
     .pipe(gulp.dest("./css"));
 });
 
