@@ -3206,7 +3206,7 @@ $(document).ready(function() {
 			buttonRight: $("#buttons > .right"),
 			autoPlay: 1,
 			smooth: true,
-			// frontItemClass: "closest",
+			frontItemClass: "closest",
 			bringToFront: true
 		});
 		console.log("bsdk");
@@ -3222,7 +3222,7 @@ $(document).ready(function() {
 			buttonRight: $("#buttons > .right"),
 			autoPlay: 1,
 			smooth: true,
-			// frontItemClass: "closest",
+			frontItemClass: "closest",
 			bringToFront: true
 		});
 		// console.log("mc");
@@ -3238,7 +3238,7 @@ $(document).ready(function() {
 			buttonRight: $("#buttons > .right"),
 			autoPlay: 1,
 			smooth: true,
-			// frontItemClass: "closest",
+			frontItemClass: "closest",
 			bringToFront: true
 		});
 		console.log("bc");
@@ -3253,7 +3253,7 @@ $(document).ready(function() {
 			buttonLeft: $("#buttons > .left"),
 			buttonRight: $("#buttons > .right"),
 			autoPlay: 1,
-			autoPlayDelay: 2000,
+			autoPlayDelay: 3000,
 			smooth: true,
 			frontItemClass: "closest",
 			bringToFront: true
@@ -3338,14 +3338,11 @@ function no_reg() {
 // 		window.scroll(scrollToX, scrollToY);
 // 	}
 // };
-
-// document.addEventListener("mousewheel", scroll, false);
-$(document).ready( function(){
-	$('.cloud9-item').on('click', function(){
-		console.log("yoyoyoyo");
-		if($('.closest').attr("id") == 'ml'){
-			$('#modal-ml').iziModal('open');
-			console.log("hohohoho");
-		}
-	})
-})
+	$(document).on('click', ".cloud9-item.closest", function() {
+			if($('.closest').attr("id") == 'cc'){
+				$('#modal-c').iziModal('open');
+			}
+			else {
+				$('#modal-'+$('.closest').attr("id")).iziModal('open');
+			}
+	});
