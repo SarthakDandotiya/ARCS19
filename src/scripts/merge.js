@@ -3206,6 +3206,7 @@ $(document).ready(function() {
 			buttonRight: $("#buttons > .right"),
 			autoPlay: 1,
 			smooth: true,
+			// frontItemClass: "closest",
 			bringToFront: true
 		});
 		console.log("bsdk");
@@ -3221,6 +3222,7 @@ $(document).ready(function() {
 			buttonRight: $("#buttons > .right"),
 			autoPlay: 1,
 			smooth: true,
+			// frontItemClass: "closest",
 			bringToFront: true
 		});
 		// console.log("mc");
@@ -3236,6 +3238,7 @@ $(document).ready(function() {
 			buttonRight: $("#buttons > .right"),
 			autoPlay: 1,
 			smooth: true,
+			// frontItemClass: "closest",
 			bringToFront: true
 		});
 		console.log("bc");
@@ -3252,7 +3255,7 @@ $(document).ready(function() {
 			autoPlay: 1,
 			autoPlayDelay: 2000,
 			smooth: true,
-			frontItemClass: "card-shadow",
+			frontItemClass: "closest",
 			bringToFront: true
 		});
 	}
@@ -3337,3 +3340,12 @@ function no_reg() {
 // };
 
 // document.addEventListener("mousewheel", scroll, false);
+$(document).ready( function(){
+	$('.cloud9-item').on('click', function(){
+		console.log("yoyoyoyo");
+		if($('.closest').attr("id") == 'ml'){
+			$('#modal-ml').iziModal('open');
+			console.log("hohohoho");
+		}
+	})
+})
