@@ -3150,6 +3150,20 @@ img {
 		        transform: scaleX(0);
 	}
 }
+
+figure{
+	/* height: 40%; */
+	width: 500px;
+}
+
+.photostack-img{
+	height: 90%;
+	width: 100%;
+}
+
+.photostack-img img{
+	width: 100%;
+}
 /*  */
 /*  */
 /*  */
@@ -3489,6 +3503,11 @@ img {
 		display: block;
 		width: 80%;
 	}
+
+	figure{
+		/* height: 40%; */
+		width: 300px;
+	}
 }
 
 @media only screen and (max-width: 425px) {
@@ -3580,6 +3599,10 @@ img {
 	}
 	.about-links a {
 		font-size: 1.1em;
+	}
+	figure{
+		/* height: 40%; */
+		width: 250px;
 	}
 }
 

@@ -472,14 +472,14 @@
 	};
 
 	Photostack.prototype._isOverlapping = function(itemVal) {
-		var dxArea = this.sizes.item.width + this.sizes.item.width / 3, // adding some extra avoids any rotated item to touch the central area
-			dyArea = this.sizes.item.height + this.sizes.item.height / 3,
+		var dxArea = this.sizes.item.width + this.sizes.item.width / 10.5, // adding some extra avoids any rotated item to touch the central area
+			dyArea = this.sizes.item.height + this.sizes.item.height / 10.5,
 			areaVal = {
 				x: this.sizes.inner.width / 2 - dxArea / 2,
 				y: this.sizes.inner.height / 2 - dyArea / 2
 			},
-			dxItem = this.sizes.item.width,
-			dyItem = this.sizes.item.height;
+			dxItem = this.sizes.item.width + 100,
+			dyItem = this.sizes.item.height + 100;
 
 		if (
 			!(
