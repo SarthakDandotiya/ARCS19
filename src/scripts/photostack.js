@@ -472,8 +472,8 @@
 	};
 
 	Photostack.prototype._isOverlapping = function(itemVal) {
-		var dxArea = this.sizes.item.width + this.sizes.item.width / 10.5, // adding some extra avoids any rotated item to touch the central area
-			dyArea = this.sizes.item.height + this.sizes.item.height / 10.5,
+		var dxArea = this.sizes.item.width + this.sizes.item.width / 12, // adding some extra avoids any rotated item to touch the central area
+			dyArea = this.sizes.item.height + this.sizes.item.height / 12,
 			areaVal = {
 				x: this.sizes.inner.width / 2 - dxArea / 2,
 				y: this.sizes.inner.height / 2 - dyArea / 2

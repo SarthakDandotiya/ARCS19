@@ -1920,7 +1920,7 @@ span.two {
 
 li {
 	color: white;
-	font-size: 2.5em;
+	font-size: 2em;
 	margin: 0.1em 0;
 	list-style: none;
 }
@@ -3154,6 +3154,7 @@ img {
 figure{
 	/* height: 40%; */
 	width: 500px;
+	top: 10%;
 }
 
 .photostack-img{
@@ -3163,6 +3164,16 @@ figure{
 
 .photostack-img img{
 	width: 100%;
+}
+
+.photostack-current {
+	z-index: 500;
+	transition: 1s;
+}
+#photostack-1 nav span.current {
+	background: #666;
+	-webkit-transform: scale(0.81);
+	transform: scale(0.81);
 }
 /*  */
 /*  */
@@ -3241,6 +3252,10 @@ figure{
 	.event-card img {
 		height: 10em;
 	}
+	.data ul li {
+		font-size: 1.6em;
+		margin: 0.75em;
+	}
 }
 
 @media only screen and (max-width: 900px) {
@@ -3277,6 +3292,11 @@ figure{
 		height: 9em;
 	}
 
+	.data ul li {
+		font-size: 1.5em;
+		margin: 0.75em;
+	}
+
 }
 
 @media only screen and (max-width: 600px) {
@@ -3297,7 +3317,7 @@ figure{
 	}
 	/* Menu */
 	.data ul li {
-		font-size: 1.5em;
+		font-size: 1.3em;
 		margin: 0.75em;
 	}
 	/* Landing */
@@ -3504,9 +3524,15 @@ figure{
 		width: 80%;
 	}
 
+	.photostack nav {
+		transform: scale(0.75);
+	}
+
 	figure{
 		/* height: 40%; */
+		top: 0%;
 		width: 300px;
+		padding: 10px !important;
 	}
 }
 
@@ -3602,6 +3628,7 @@ figure{
 	}
 	figure{
 		/* height: 40%; */
+		top: 0%;
 		width: 250px;
 	}
 }
