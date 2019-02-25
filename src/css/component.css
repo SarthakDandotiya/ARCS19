@@ -113,6 +113,7 @@
 	height: 30px;
 	cursor: pointer;
 	background: #aaa;
+	border: 2px solid black;
 	border-radius: 50%;
 	text-align: center;
 	-webkit-transition: -webkit-transform 0.6s ease-in-out, background 0.3s;
@@ -149,6 +150,7 @@
 
 .photostack nav span.current {
 	background: #888;
+	border: 3px solid #faa41a;
 	-webkit-transform: scale(1);
 	transform: scale(1);
 }
@@ -322,5 +324,5 @@ figure.photostack-current::after {
 
 .photostack-current {
 	width: 45%;
-	left: -3%;
+	left: -4%;
 }
