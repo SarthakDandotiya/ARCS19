@@ -227,6 +227,7 @@
 
 		classie.removeClass(this.navDots[this.current], "current");
 		classie.removeClass(this.currentItem, "photostack-current");
+		classie.addClass(this.currentItem, "photostack-inactive", 5000);
 
 		// change current
 		this.current = pos;
@@ -403,6 +404,10 @@
 							self.currentItem,
 							"photostack-current"
 						);
+						classie.removeClass(
+							self.currentItem,
+							"photostack-inactive"
+						);
 					} else {
 						item.style.WebkitTransform =
 							"translate(" +
@@ -472,8 +477,8 @@
 	};
 
 	Photostack.prototype._isOverlapping = function(itemVal) {
-		var dxArea = this.sizes.item.width + this.sizes.item.width / 12, // adding some extra avoids any rotated item to touch the central area
-			dyArea = this.sizes.item.height + this.sizes.item.height / 12,
+		var dxArea = this.sizes.item.width + this.sizes.item.width / 5, // adding some extra avoids any rotated item to touch the central area
+			dyArea = this.sizes.item.height + this.sizes.item.height / 5,
 			areaVal = {
 				x: this.sizes.inner.width / 2 - dxArea / 2,
 				y: this.sizes.inner.height / 2 - dyArea / 2

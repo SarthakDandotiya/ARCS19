@@ -3534,6 +3534,12 @@ figure{
 		width: 300px;
 		padding: 10px !important;
 	}
+
+	.photostack-current {
+		width: 75%;
+		left: -9%;
+	}
+
 }
 
 @media only screen and (max-width: 425px) {
@@ -3589,6 +3595,11 @@ figure{
 	.sponsors-data img {
 		width: 29.5%;
 		padding: 0%;
+	}
+
+	.photostack-current {
+		width: 75%;
+		left: -2.5%;
 	}
 }
 

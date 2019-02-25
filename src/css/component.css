@@ -307,3 +307,20 @@ figure.photostack-current::after {
 	-webkit-transform: scale(0.61);
 	transform: scale(0.61);
 }
+
+/* Inactive */
+.photostack-inactive {
+	/* opacity: 0.8; */
+	filter: blur(2px);
+	/* transform: scale(0.75); */
+	/* height: 30%; */
+	width: 25%;
+	transition: 1s;
+	z-index: 1;
+	background-blend-mode: difference;
+}
+
+.photostack-current {
+	width: 45%;
+	left: -3%;
+}
